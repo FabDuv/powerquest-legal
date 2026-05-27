@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Terms of Use / Conditions d'utilisation — PowerQuest</title>
+  <style>
+    :root {
+      --accent: #f97316;
+      --bg: #0f0f11;
+      --border: #2a2a32;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 0 16px;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 48px 0 80px; }
+    .back { display: inline-block; color: var(--muted); text-decoration: none; font-size: 14px; margin-bottom: 24px; }
+    .back:hover { color: var(--text); }
+    h1 { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .date { font-size: 13px; color: var(--muted); margin: 8px 0 40px; }
+    .lang-switch { display: flex; gap: 8px; margin-bottom: 32px; }
+    .lang-btn {
+      padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 600;
+      cursor: pointer; border: 1px solid var(--border); background: transparent; color: var(--muted);
+    }
+    .lang-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+    section { margin-bottom: 32px; }
+    h2 { font-size: 18px; font-weight: 600; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    p { margin-bottom: 10px; }
+    ul { padding-left: 20px; margin-bottom: 10px; }
+    li { margin-bottom: 6px; }
+    a { color: var(--accent); text-decoration: underline; }
+    strong { font-weight: 600; }
+    em { font-style: italic; }
+    .warning {
+      background: rgba(234,179,8,0.08); border: 1px solid rgba(234,179,8,0.3);
+      border-radius: 8px; padding: 16px; margin-top: 4px;
+    }
+    .legal-box {
+      background: rgba(255,255,255,0.04); border: 1px solid var(--border);
+      border-radius: 8px; padding: 16px; font-size: 13px; line-height: 1.8;
+    }
+    .footer-sig {
+      margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border);
+      font-size: 13px; color: var(--muted); line-height: 1.9;
+    }
+    .footer-sig a { color: var(--muted); }
+    .footer-sig a:hover { color: var(--text); }
+
+    [data-lang] { display: block; }
+    body.en [data-lang="fr"] { display: none; }
+    body.fr [data-lang="en"] { display: none; }
+  </style>
+</head>
+<body class="fr">
+<div class="container">
+
+  <a class="back" href="/">← PowerQuest</a>
+
+  <div class="lang-switch">
+    <button class="lang-btn active" onclick="setLang('fr')" id="btn-fr">Français</button>
+    <button class="lang-btn" onclick="setLang('en')" id="btn-en">English</button>
+  </div>
+
+  <!-- ===================== FRENCH ===================== -->
+  <div data-lang="fr">
+    <h1>Conditions d'utilisation</h1>
+    <p class="date">Dernière mise à jour : 26 mai 2026</p>
+
+    <section>
+      <h2>1. Mentions légales (LCEN Art. 6-III)</h2>
+      <div class="legal-box">
+        Directeur de la publication : Fabien Duvacher<br>
+        Statut : auto-entrepreneur<br>
+        SIRET : [À REMPLIR]<br>
+        Adresse : [À REMPLIR], France<br>
+        Contact : <a href="mailto:contact@powerquest.fr">contact@powerquest.fr</a><br><br>
+        Hébergement de l'application iOS : Apple Inc., One Apple Park Way, Cupertino, CA 95014, USA<br>
+        Hébergement de la base de données : Supabase Inc. (serveurs UE, Irlande)<br>
+        Hébergement de ces pages : Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Licence — Apple Standard EULA</h2>
+      <p>
+        L'utilisation de PowerQuest sur iOS est régie par
+        l'<a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">EULA standard Apple</a>.
+        Les présentes conditions complètent cet EULA sur les points spécifiques à PowerQuest
+        non couverts par Apple.
+      </p>
+      <p>
+        Ces conditions sont régies par le <strong>droit français</strong>. En cas de litige non
+        résolu à l'amiable, les tribunaux français sont compétents, sans préjudice des droits
+        impératifs de protection du consommateur applicables dans votre pays de résidence.
+      </p>
+    </section>
+
+    <section>
+      <h2>3. Avertissement santé</h2>
+      <div class="warning">
+        <p>
+          ⚠️ <strong>PowerQuest n'est pas un dispositif médical.</strong> Les recommandations
+          d'entraînement, calculs de charge et zones de fréquence cardiaque sont fournis à titre
+          indicatif uniquement. <strong>Consultez un médecin</strong> avant de commencer un
+          programme sportif, particulièrement en cas d'antécédents cardiaques ou
+          musculo-squelettiques.
+        </p>
+        <p style="margin-top:8px;">
+          L'éditeur ne saurait être tenu responsable des dommages résultant d'un usage non
+          conforme aux recommandations médicales ou d'une utilisation en dépit de contre-indications
+          médicales connues. Cette limitation ne s'applique pas en cas de faute intentionnelle ou de
+          faute lourde de l'éditeur, ni pour les dommages corporels exclus par le droit français.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Publicité</h2>
+      <p>
+        L'application est gratuite et financée par la publicité (AdMob / Google). Des annonces
+        peuvent s'afficher pendant les phases de repos entre les séries. Vous pouvez limiter la
+        publicité personnalisée en refusant le suivi via le prompt iOS « App Tracking Transparency ».
+        En cas de refus, des publicités contextuelles non ciblées continueront à s'afficher.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. Contenu utilisateur (UGC)</h2>
+      <p>
+        En publiant un programme, un commentaire ou un post sur le fil communautaire, vous accordez
+        à l'éditeur une licence <strong>non exclusive, gratuite, mondiale, pour la durée de
+        diffusion du contenu dans l'application</strong> (y compris aux sous-traitants techniques
+        assurant l'hébergement), pour l'afficher et le distribuer dans PowerQuest et, à titre
+        accessoire, dans les communications relatives à l'application.
+        Vous garantissez être l'auteur du contenu ou disposer des autorisations nécessaires.
+        Vous conservez la propriété de votre contenu.
+      </p>
+      <p><strong>Vous vous engagez à ne pas publier de contenu :</strong></p>
+      <ul>
+        <li>illicite, diffamatoire, haineux ou discriminatoire</li>
+        <li>portant atteinte aux droits d'autrui (image, propriété intellectuelle, vie privée)</li>
+        <li>à caractère pornographique, violent ou choquant</li>
+        <li>de spam ou de publicité non sollicitée</li>
+      </ul>
+      <p>
+        Tout contenu inapproprié peut être signalé via le bouton 🚩 présent sur chaque post.
+        Tout utilisateur peut bloquer un autre utilisateur depuis son profil public.
+        L'éditeur s'engage à traiter les signalements dans un <strong>délai raisonnable</strong>.
+        Il se réserve le droit de supprimer tout contenu non conforme et de suspendre les comptes
+        en cas de violations répétées.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. Données personnelles</h2>
+      <p>
+        Le traitement de vos données personnelles est décrit dans notre
+        <a href="/privacy/">politique de confidentialité</a>.
+        Vous pouvez exporter ou supprimer vos données à tout moment
+        (<em>Profil → Confidentialité</em>). La suppression du compte entraîne la perte
+        définitive de vos programmes, séances, posts et données associées.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Médiation de la consommation</h2>
+      <p>
+        En cas de litige non résolu avec l'éditeur, vous pouvez recourir gratuitement à un
+        médiateur de la consommation. Médiateur compétent :
+        <strong>[À REMPLIR — ex. Médiateur du e-commerce FEVAD, ou CNPM-Médiation-Consommation]</strong>
+        — lien de saisine : [À REMPLIR].
+      </p>
+      <p>
+        Vous pouvez également utiliser la plateforme européenne de règlement des litiges en ligne :
+        <a href="https://ec.europa.eu/consumers/odr" target="_blank">ec.europa.eu/consumers/odr</a>.
+      </p>
+    </section>
+
+    <section>
+      <h2>8. Modifications</h2>
+      <p>
+        Ces conditions peuvent évoluer. Toute modification substantielle vous sera notifiée dans
+        l'app <strong>au moins 30 jours avant son entrée en vigueur</strong>. Si vous n'acceptez
+        pas les nouvelles conditions, vous pouvez supprimer votre compte sans frais avant
+        leur application.
+      </p>
+    </section>
+
+    <section>
+      <h2>9. Contact</h2>
+      <p>
+        Pour toute question ou réclamation :
+        <a href="mailto:contact@powerquest.fr">contact@powerquest.fr</a>.
+        Délai de réponse : accusé de réception sous 5 jours ouvrés, réponse de fond sous 1 mois.
+      </p>
+    </section>
+
+    <div class="footer-sig">
+      <strong>PowerQuest</strong><br>
+      Édité par Fabien Duvacher — auto-entrepreneur (France)<br>
+      SIRET : [À REMPLIR]<br>
+      Adresse : [À REMPLIR]<br>
+      Contact : <a href="mailto:contact@powerquest.fr">contact@powerquest.fr</a><br><br>
+      Voir aussi :
+      <a href="/privacy/">Politique de confidentialité</a> ·
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">EULA Apple</a> ·
+      <a href="https://ec.europa.eu/consumers/odr" target="_blank">Médiation UE</a>
+    </div>
+  </div>
+
+  <!-- ===================== ENGLISH ===================== -->
+  <div data-lang="en">
+    <h1>Terms of Use</h1>
+    <p class="date">Last updated: May 26, 2026</p>
+
+    <section>
+      <h2>1. Legal Notices</h2>
+      <div class="legal-box">
+        Publisher: Fabien Duvacher — sole trader<br>
+        SIRET: [TO BE FILLED]<br>
+        Address: [TO BE FILLED], France<br>
+        Contact: <a href="mailto:contact@powerquest.fr">contact@powerquest.fr</a><br><br>
+        iOS app hosting: Apple Inc., One Apple Park Way, Cupertino, CA 95014, USA<br>
+        Database hosting: Supabase Inc. (EU servers, Ireland)<br>
+        These pages hosted by: Vercel Inc., 440 N Barranca Ave #4133, Covina, CA 91723, USA
+      </div>
+    </section>
+
+    <section>
+      <h2>2. Licence — Apple Standard EULA</h2>
+      <p>
+        Your use of PowerQuest on iOS is governed by the
+        <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Apple Standard EULA</a>.
+        These terms supplement the EULA on points specific to PowerQuest not covered by Apple.
+      </p>
+      <p>
+        These terms are governed by <strong>French law</strong>. Any dispute not resolved
+        amicably shall be submitted to the competent French courts, without prejudice to any
+        mandatory consumer protection rights applicable in your country of residence.
+      </p>
+    </section>
+
+    <section>
+      <h2>3. Health Disclaimer</h2>
+      <div class="warning">
+        <p>
+          ⚠️ <strong>PowerQuest is not a medical device.</strong> Training recommendations,
+          load calculations and heart rate zones are provided for informational purposes only.
+          <strong>Consult a doctor</strong> before starting any fitness program, especially if
+          you have cardiovascular or musculoskeletal conditions.
+        </p>
+        <p style="margin-top:8px;">
+          The publisher shall not be liable for damages arising from use contrary to medical
+          advice or in spite of known medical contraindications. This limitation does not apply
+          to intentional or gross negligence on the publisher's part, or to personal injury
+          claims that cannot be excluded under applicable law.
+        </p>
+      </div>
+    </section>
+
+    <section>
+      <h2>4. Advertising</h2>
+      <p>
+        The app is free and ad-supported (AdMob / Google). Ads may appear during rest periods
+        between sets. You can limit personalised advertising by declining tracking via the iOS
+        "App Tracking Transparency" prompt. If you decline, contextual (non-targeted) ads will
+        continue to appear.
+      </p>
+    </section>
+
+    <section>
+      <h2>5. User-Generated Content (UGC)</h2>
+      <p>
+        By posting a program, comment or activity post in the community feed, you grant the
+        publisher a <strong>non-exclusive, royalty-free, worldwide licence for the duration
+        of the content's distribution in the app</strong> (including to technical sub-processors
+        providing hosting), to display and distribute it in PowerQuest and, incidentally, in
+        communications about the app. You warrant that you are the author or hold all necessary
+        rights. You retain ownership of your content.
+      </p>
+      <p><strong>You agree not to post content that is:</strong></p>
+      <ul>
+        <li>unlawful, defamatory, hateful or discriminatory</li>
+        <li>infringing third-party rights (image rights, intellectual property, privacy)</li>
+        <li>pornographic, violent or otherwise disturbing</li>
+        <li>spam or unsolicited advertising</li>
+      </ul>
+      <p>
+        Any inappropriate content can be reported using the 🚩 button on each post.
+        Any user can block another user from their public profile.
+        The publisher commits to reviewing reports within a <strong>reasonable timeframe</strong>.
+        The publisher reserves the right to remove non-compliant content and suspend accounts
+        for repeated violations.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. Personal Data</h2>
+      <p>
+        How we handle your personal data is described in our
+        <a href="/privacy/">Privacy Policy</a>.
+        You can export or delete your data at any time
+        (<em>Profile → Privacy</em>). Deleting your account permanently removes your programs,
+        sessions, posts and all associated data.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Dispute Resolution</h2>
+      <p>
+        In the event of an unresolved dispute, EU residents may use the European Online Dispute
+        Resolution platform:
+        <a href="https://ec.europa.eu/consumers/odr" target="_blank">ec.europa.eu/consumers/odr</a>.
+        French residents may contact the designated consumer mediator:
+        <strong>[TO BE FILLED]</strong>.
+      </p>
+    </section>
+
+    <section>
+      <h2>8. Changes</h2>
+      <p>
+        These terms may be updated. Significant changes will be notified inside the app
+        <strong>at least 30 days before they take effect</strong>. If you do not accept the new
+        terms, you may delete your account free of charge before they come into force.
+      </p>
+    </section>
+
+    <section>
+      <h2>9. Contact</h2>
+      <p>
+        For any questions or complaints:
+        <a href="mailto:contact@powerquest.fr">contact@powerquest.fr</a>.
+        Acknowledgement within 5 business days, substantive reply within 1 month.
+      </p>
+    </section>
+
+    <div class="footer-sig">
+      <strong>PowerQuest</strong><br>
+      Published by Fabien Duvacher — sole trader (France)<br>
+      SIRET: [TO BE FILLED]<br>
+      Address: [TO BE FILLED]<br>
+      Contact: <a href="mailto:contact@powerquest.fr">contact@powerquest.fr</a><br><br>
+      See also:
+      <a href="/privacy/">Privacy Policy</a> ·
+      <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/" target="_blank">Apple EULA</a> ·
+      <a href="https://ec.europa.eu/consumers/odr" target="_blank">EU Mediation</a>
+    </div>
+  </div>
+
+</div>
+<script>
+  function setLang(lang) {
+    document.body.className = lang;
+    document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.documentElement.lang = lang;
+  }
+  const browserLang = (navigator.language || 'fr').startsWith('fr') ? 'fr' : 'en';
+  setLang(browserLang);
+</script>
+</body>
+</html>

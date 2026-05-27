@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy / Politique de confidentialité — PowerQuest</title>
+  <style>
+    :root {
+      --accent: #f97316;
+      --bg: #0f0f11;
+      --border: #2a2a32;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 0 16px;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 48px 0 80px; }
+    .back { display: inline-block; color: var(--muted); text-decoration: none; font-size: 14px; margin-bottom: 24px; }
+    .back:hover { color: var(--text); }
+    h1 { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .date { font-size: 13px; color: var(--muted); margin: 8px 0 40px; }
+    .lang-switch { display: flex; gap: 8px; margin-bottom: 32px; }
+    .lang-btn {
+      padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 600;
+      cursor: pointer; border: 1px solid var(--border); background: transparent; color: var(--muted);
+    }
+    .lang-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+    section { margin-bottom: 32px; }
+    h2 { font-size: 18px; font-weight: 600; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    p { margin-bottom: 10px; }
+    ul { padding-left: 20px; margin-bottom: 10px; }
+    li { margin-bottom: 6px; }
+    a { color: var(--accent); text-decoration: underline; }
+    strong { font-weight: 600; }
+    em { font-style: italic; }
+    .notice {
+      background: rgba(249,115,22,0.08); border: 1px solid rgba(249,115,22,0.25);
+      border-radius: 8px; padding: 14px 16px; margin: 10px 0;
+      font-size: 14px;
+    }
+    .footer-sig {
+      margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border);
+      font-size: 13px; color: var(--muted); line-height: 1.9;
+    }
+    .footer-sig a { color: var(--muted); }
+    .footer-sig a:hover { color: var(--text); }
+
+    [data-lang] { display: block; }
+    body.en [data-lang="fr"] { display: none; }
+    body.fr [data-lang="en"] { display: none; }
+  </style>
+</head>
+<body class="fr">
+<div class="container">
+
+  <a class="back" href="/">← PowerQuest</a>
+
+  <div class="lang-switch">
+    <button class="lang-btn active" onclick="setLang('fr')" id="btn-fr">Français</button>
+    <button class="lang-btn" onclick="setLang('en')" id="btn-en">English</button>
+  </div>
+
+  <!-- ===================== FRENCH ===================== -->
+  <div data-lang="fr">
+    <h1>Politique de confidentialité</h1>
+    <p class="date">Dernière mise à jour : 26 mai 2026</p>
+
+    <section>
+      <h2>1. Responsable du traitement</h2>
+      <p>
+        PowerQuest est une application iOS de suivi sportif.
+        Contact : <a href="mailto:contact@powerquest.fr">contact@powerquest.fr</a>.
+      </p>
+      <p>
+        Aucun délégué à la protection des données (DPO) n'est désigné, l'entreprise ne dépassant
+        pas les seuils de l'Art. 37 RGPD. Pour toute demande relative à vos données, contactez-nous
+        à l'adresse ci-dessus. Délai de réponse : 1 mois maximum (Art. 12(3) RGPD).
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Données collectées</h2>
+      <p>Lorsque vous utilisez PowerQuest, nous collectons :</p>
+      <ul>
+        <li>
+          <strong>Compte</strong> : adresse email relayée ou masquée via Sign in with Apple
+          (un identifiant opaque unique par utilisateur, non lié à votre Apple ID), nom d'utilisateur,
+          avatar, ville (optionnelle), bio.
+        </li>
+        <li>
+          <strong>Activité sportive</strong> : programmes, plannings, séances complétées, exercices
+          personnalisés, séries/reps/poids, notes RPE.
+        </li>
+        <li>
+          <strong>Santé</strong> (iOS, si vous autorisez HealthKit) : pas quotidiens, fréquence
+          cardiaque, dépense calorique, distance. Ces données sont lues localement via HealthKit et
+          envoyées à nos serveurs uniquement lors de la validation d'une séance.
+          <strong>Les données de santé ne sont jamais utilisées à des fins publicitaires,
+          ni partagées avec des tiers à des fins de profilage ou de monétisation.</strong>
+        </li>
+        <li>
+          <strong>Social</strong> (si profil public activé) : posts d'activité, commentaires,
+          likes, programmes partagés.
+        </li>
+        <li>
+          <strong>Modération</strong> : en cas de signalement, nous conservons votre identifiant,
+          le contenu signalé et le motif, pour la durée nécessaire au traitement du litige.
+        </li>
+        <li>
+          <strong>Coach / athlète</strong> : relations coach↔athlète, programmes assignés,
+          séances validées.
+        </li>
+        <li>
+          <strong>Notifications</strong> : un token de notification push (APNs Apple) est
+          enregistré pour vous envoyer les alertes de séance de votre coach.
+        </li>
+        <li>
+          <strong>Publicité</strong> : si vous utilisez la version gratuite, AdMob (Google)
+          peut collecter l'IDFA (Identifier for Advertisers) si vous avez accordé le suivi via
+          le prompt « App Tracking Transparency ». En cas de refus, AdMob affiche uniquement
+          des publicités contextuelles sans identifiant personnel.
+        </li>
+        <li>
+          <strong>Données techniques</strong> : adresse IP, type d'appareil, version iOS,
+          version de l'app, horodatages de connexion, logs d'erreur et de performance
+          (collectés par Sentry pour la détection de bugs).
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Finalités</h2>
+      <ul>
+        <li>Fournir le service (synchronisation, historique, récapitulatif de séance)</li>
+        <li>Permettre le mode coach/athlète (attribution de séances, suivi)</li>
+        <li>Modérer le contenu communautaire et prévenir les abus</li>
+        <li>Envoyer des notifications push de séances assignées par un coach</li>
+        <li>Détecter les bugs et monitorer les performances (Sentry — données anonymisées)</li>
+        <li>Diffuser des publicités contextuelles ou personnalisées en version gratuite</li>
+        <li>Répondre à vos demandes de support</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Base légale (RGPD)</h2>
+      <ul>
+        <li>
+          <strong>Exécution du contrat (Art. 6(1)(b))</strong> : fourniture du service de base
+          (programmes, séances, synchronisation).
+        </li>
+        <li>
+          <strong>Consentement (Art. 6(1)(a))</strong> : publicité ciblée (ATT), profil public
+          et social.
+        </li>
+        <li>
+          <strong>Données de santé HealthKit (Art. 9(2)(a))</strong> : consentement explicite
+          accordé lors de l'inscription via une case à cocher dédiée dans l'app, en plus du
+          prompt iOS HealthKit (qui constitue l'accès technique, distinct du consentement RGPD).
+          Vous pouvez retirer ce consentement via <em>Réglages iOS → Santé → Accès → PowerQuest</em> ;
+          pour supprimer les données déjà synchronisées, utilisez « Supprimer mon compte » ou
+          contactez-nous.
+        </li>
+        <li>
+          <strong>Intérêt légitime (Art. 6(1)(f))</strong> : modération du contenu,
+          sécurité des comptes, détection de bugs (Sentry), push notifications coach.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Sous-traitants</h2>
+      <ul>
+        <li><strong>Supabase</strong> (UE, Irlande) — base de données et authentification</li>
+        <li><strong>Vercel</strong> (US — Standard Contractual Clauses) — hébergement de ces pages légales</li>
+        <li><strong>Apple</strong> — Sign in with Apple, HealthKit, APNs (push notifications), App Store</li>
+        <li><strong>Google / AdMob</strong> — publicités in-app (iOS)</li>
+        <li><strong>Sentry</strong> (US — SCC) — rapports de crash et données de performance anonymes</li>
+      </ul>
+      <p class="notice">
+        ⚠️ Si vous utilisez la fonctionnalité d'export TCX (export de séance vers Garmin, Polar,
+        Wahoo…), vous transférez volontairement vos données vers la plateforme de votre choix,
+        dont les règles de confidentialité sont indépendantes de PowerQuest.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. Durée de conservation</h2>
+      <ul>
+        <li>
+          <strong>Compte actif</strong> : données conservées tant que le compte est actif. En cas
+          d'inactivité de 3 ans (durée justifiée pour permettre de reprendre après une blessure ou
+          une pause), archivage possible après notification préalable par email, puis suppression
+          définitive au-delà de 6 mois d'archivage.
+        </li>
+        <li>
+          <strong>Données de modération</strong> : conservées 1 an après résolution du signalement.
+        </li>
+        <li>
+          <strong>Journaux techniques (Sentry, logs de connexion)</strong> : 1 an maximum.
+        </li>
+      </ul>
+      <p>
+        Suppression à la demande : <em>Profil → Confidentialité → Supprimer mon compte</em>.
+        La suppression est <strong>immédiate et définitive</strong>, incluant les données de santé
+        synchronisées, les séances, les posts et toutes les données associées.
+      </p>
+      <p>
+        En cas de violation de données susceptible d'affecter vos droits, vous serez informé dans
+        les meilleurs délais conformément à l'Art. 34 RGPD.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Vos droits (RGPD)</h2>
+      <p>Vous disposez des droits suivants. Délai de réponse : 1 mois maximum.</p>
+      <ul>
+        <li><strong>Accès (Art. 15)</strong> : bouton « Exporter mes données » dans l'app</li>
+        <li><strong>Rectification (Art. 16)</strong> : modifier votre profil dans l'app</li>
+        <li><strong>Effacement (Art. 17)</strong> : bouton « Supprimer mon compte »</li>
+        <li><strong>Portabilité (Art. 20)</strong> : export JSON disponible</li>
+        <li><strong>Limitation (Art. 18)</strong> : nous contacter par email</li>
+        <li><strong>Opposition (Art. 21)</strong> : vous opposer aux traitements fondés sur l'intérêt
+          légitime (modération, Sentry) en nous contactant par email</li>
+        <li><strong>Retrait du consentement</strong> : publicité via prompt ATT (iOS) ;
+          HealthKit via Réglages iOS</li>
+        <li><strong>Réclamation</strong> : <a href="https://www.cnil.fr/fr/plaintes" target="_blank">CNIL</a></li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>8. Sécurité</h2>
+      <p>
+        Données chiffrées en transit (TLS 1.3) et au repos (base Postgres chiffrée via Supabase).
+        Contrôle d'accès par Row-Level Security (RLS Supabase). Authentification uniquement via
+        Sign in with Apple — aucun mot de passe stocké. En cas de violation de données, la CNIL
+        sera notifiée sous 72h (Art. 33 RGPD) et vous serez informé si nécessaire (Art. 34).
+      </p>
+    </section>
+
+    <section>
+      <h2>9. Mineurs</h2>
+      <p>
+        PowerQuest est destiné aux personnes d'au moins <strong>15 ans</strong> en France
+        (Art. 7-1 Loi Informatique et Libertés). Un contrôle d'âge auto-déclaratif est effectué
+        lors de l'inscription. Si votre législation locale impose un âge ou un consentement
+        parental différent, ce seuil s'applique. En cas de doute, demandez à votre représentant
+        légal avant de vous inscrire.
+      </p>
+    </section>
+
+    <section>
+      <h2>10. Modifications</h2>
+      <p>
+        Cette politique peut être mise à jour. Les modifications substantielles vous seront
+        notifiées dans l'app <strong>au moins 30 jours avant leur entrée en vigueur</strong>.
+        Si vous n'acceptez pas les nouvelles conditions, vous pouvez supprimer votre compte
+        sans frais avant leur entrée en vigueur.
+      </p>
+    </section>
+
+    <div class="footer-sig">
+      <strong>PowerQuest</strong><br>
+      Édité par Fabien Duvacher — auto-entrepreneur (France)<br>
+      SIRET : [À REMPLIR]<br>
+      Adresse : [À REMPLIR]<br>
+      Contact : <a href="mailto:contact@powerquest.fr">contact@powerquest.fr</a><br><br>
+      Voir aussi : <a href="/terms/">Conditions d'utilisation</a>
+    </div>
+  </div>
+
+  <!-- ===================== ENGLISH ===================== -->
+  <div data-lang="en">
+    <h1>Privacy Policy</h1>
+    <p class="date">Last updated: May 26, 2026</p>
+
+    <section>
+      <h2>1. Data Controller</h2>
+      <p>
+        PowerQuest is an iOS fitness tracking app.
+        Contact: <a href="mailto:contact@powerquest.fr">contact@powerquest.fr</a>.
+      </p>
+      <p>
+        No Data Protection Officer (DPO) has been appointed, as the company does not meet the
+        thresholds of Art. 37 GDPR. For any data request, contact us at the address above.
+        Response time: maximum 1 month (Art. 12(3) GDPR).
+      </p>
+    </section>
+
+    <section>
+      <h2>2. Data We Collect</h2>
+      <ul>
+        <li>
+          <strong>Account</strong>: email address relayed or hidden via Sign in with Apple
+          (a unique opaque identifier per user, unrelated to your Apple ID), username, avatar,
+          city (optional), bio.
+        </li>
+        <li>
+          <strong>Training activity</strong>: programs, schedules, completed sessions, custom
+          exercises, sets/reps/weight, RPE notes.
+        </li>
+        <li>
+          <strong>Health</strong> (iOS only, if you grant HealthKit access): daily steps, heart
+          rate, calories burned, distance. This data is read locally via HealthKit and sent to
+          our servers only when you confirm a completed session.
+          <strong>Health data is never used for advertising purposes, nor shared with third
+          parties for profiling or monetisation.</strong>
+        </li>
+        <li>
+          <strong>Social</strong> (if public profile enabled): activity posts, comments, likes,
+          shared programs.
+        </li>
+        <li>
+          <strong>Moderation</strong>: if you report content, we retain your identifier, the
+          reported content and the reason, for the duration necessary to resolve the report.
+        </li>
+        <li>
+          <strong>Coach / athlete</strong>: coach↔athlete relationships, assigned programs,
+          validated sessions.
+        </li>
+        <li>
+          <strong>Notifications</strong>: a push notification token (Apple APNs) is stored to
+          send you session alerts from your coach.
+        </li>
+        <li>
+          <strong>Advertising</strong>: if you use the free version, AdMob (Google) may collect
+          your IDFA (Identifier for Advertisers) if you granted tracking via the "App Tracking
+          Transparency" prompt. If you declined, AdMob serves context-only ads without a
+          personal identifier.
+        </li>
+        <li>
+          <strong>Technical data</strong>: IP address, device type, iOS version, app version,
+          connection timestamps, error and performance logs (collected by Sentry for bug detection).
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Purposes</h2>
+      <ul>
+        <li>Provide the service (sync, history, session recap)</li>
+        <li>Enable the coach/athlete mode (session assignment, tracking)</li>
+        <li>Moderate community content and prevent abuse</li>
+        <li>Send push notifications for coach-assigned sessions</li>
+        <li>Detect bugs and monitor performance (Sentry — anonymised data)</li>
+        <li>Show contextual or personalised ads in the free version</li>
+        <li>Respond to support requests</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>4. Legal Basis (GDPR)</h2>
+      <ul>
+        <li>
+          <strong>Contract performance (Art. 6(1)(b))</strong>: core service delivery
+          (programs, sessions, sync).
+        </li>
+        <li>
+          <strong>Consent (Art. 6(1)(a))</strong>: personalised advertising (ATT),
+          public profile and social features.
+        </li>
+        <li>
+          <strong>Health data HealthKit (Art. 9(2)(a))</strong>: explicit consent collected
+          at sign-up via a dedicated checkbox in the app, in addition to the iOS HealthKit
+          prompt (which governs API access only, not GDPR consent). You may withdraw this
+          consent via <em>iOS Settings → Health → Apps → PowerQuest</em>; to delete already
+          synced health data, use "Delete my account" or contact us.
+        </li>
+        <li>
+          <strong>Legitimate interest (Art. 6(1)(f))</strong>: content moderation, account
+          security, bug detection (Sentry), coach push notifications.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>5. Sub-processors</h2>
+      <ul>
+        <li><strong>Supabase</strong> (EU, Ireland) — database and authentication</li>
+        <li><strong>Vercel</strong> (US — Standard Contractual Clauses) — hosting of these legal pages</li>
+        <li><strong>Apple</strong> — Sign in with Apple, HealthKit, APNs, App Store</li>
+        <li><strong>Google / AdMob</strong> — in-app advertising</li>
+        <li><strong>Sentry</strong> (US — SCC) — anonymous crash reports and performance data</li>
+      </ul>
+      <p class="notice">
+        ⚠️ If you use the TCX export feature (exporting sessions to Garmin, Polar, Wahoo…),
+        you voluntarily transfer your data to the platform of your choice, governed by that
+        platform's own privacy policy — independent of PowerQuest.
+      </p>
+    </section>
+
+    <section>
+      <h2>6. Retention</h2>
+      <ul>
+        <li>
+          <strong>Active account</strong>: data kept as long as the account is active. After
+          3 years of inactivity (a period justified to allow resuming after injury or a break),
+          archival after prior email notice, then permanent deletion after 6 months of archival.
+        </li>
+        <li>
+          <strong>Moderation data</strong>: retained for 1 year after the report is resolved.
+        </li>
+        <li>
+          <strong>Technical logs (Sentry, connection logs)</strong>: maximum 1 year.
+        </li>
+      </ul>
+      <p>
+        On-demand deletion: <em>Profile → Privacy → Delete my account</em>. Deletion is
+        <strong>immediate and permanent</strong>, including synced health data, sessions, posts
+        and all associated data.
+      </p>
+      <p>
+        In the event of a data breach that may affect your rights, you will be informed promptly
+        in accordance with Art. 34 GDPR.
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Your Rights (GDPR)</h2>
+      <p>Response time: maximum 1 month.</p>
+      <ul>
+        <li><strong>Access (Art. 15)</strong>: "Export my data" button in the app</li>
+        <li><strong>Rectification (Art. 16)</strong>: edit your profile in the app</li>
+        <li><strong>Erasure (Art. 17)</strong>: "Delete my account" button</li>
+        <li><strong>Portability (Art. 20)</strong>: JSON export available</li>
+        <li><strong>Restriction (Art. 18)</strong>: contact us by email</li>
+        <li><strong>Object (Art. 21)</strong>: object to processing based on legitimate interest
+          (moderation, Sentry) by contacting us by email</li>
+        <li><strong>Withdraw consent</strong>: advertising via ATT prompt (iOS);
+          HealthKit via iOS Settings</li>
+        <li>
+          <strong>Complaint</strong>:
+          <a href="https://www.cnil.fr/fr/plaintes" target="_blank">CNIL (French DPA)</a>
+          as lead supervisory authority for EU residents.
+          UK residents: <a href="https://ico.org.uk/make-a-complaint/" target="_blank">ICO</a>.
+          Residents outside the EU/UK may have rights under local privacy laws — contact us
+          at contact@powerquest.fr for any privacy request.
+        </li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>8. Security</h2>
+      <p>
+        Data is encrypted in transit (TLS 1.3) and at rest (encrypted Postgres via Supabase),
+        with Row-Level Security (RLS). Authentication via Sign in with Apple only — no password
+        stored. In case of a data breach, the CNIL will be notified within 72 hours (Art. 33 GDPR)
+        and you will be informed if necessary (Art. 34).
+      </p>
+    </section>
+
+    <section>
+      <h2>9. Age</h2>
+      <p>
+        PowerQuest is intended for users aged <strong>15 or older</strong>. An age check is
+        performed at sign-up. If your local legislation requires a higher minimum age or parental
+        consent, that requirement applies. If in doubt, ask your legal guardian before signing up.
+      </p>
+    </section>
+
+    <section>
+      <h2>10. Changes</h2>
+      <p>
+        This policy may be updated. Significant changes will be notified inside the app
+        <strong>at least 30 days before they take effect</strong>. If you do not accept the new
+        terms, you may delete your account free of charge before they come into force.
+      </p>
+    </section>
+
+    <div class="footer-sig">
+      <strong>PowerQuest</strong><br>
+      Published by Fabien Duvacher — sole trader (France)<br>
+      SIRET: [TO BE FILLED]<br>
+      Address: [TO BE FILLED]<br>
+      Contact: <a href="mailto:contact@powerquest.fr">contact@powerquest.fr</a><br><br>
+      See also: <a href="/terms/">Terms of Use</a>
+    </div>
+  </div>
+
+</div>
+<script>
+  function setLang(lang) {
+    document.body.className = lang;
+    document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.documentElement.lang = lang;
+  }
+  const browserLang = (navigator.language || 'fr').startsWith('fr') ? 'fr' : 'en';
+  setLang(browserLang);
+</script>
+</body>
+</html>
