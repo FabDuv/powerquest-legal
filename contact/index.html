@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact / Support — PowerQuest</title>
+  <style>
+    :root {
+      --accent: #f97316;
+      --bg: #0f0f11;
+      --border: #2a2a32;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 0 16px;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 48px 0 80px; }
+    .back { display: inline-block; color: var(--muted); text-decoration: none; font-size: 14px; margin-bottom: 24px; }
+    .back:hover { color: var(--text); }
+    h1 { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .date { font-size: 13px; color: var(--muted); margin: 8px 0 40px; }
+    .lang-switch { display: flex; gap: 8px; margin-bottom: 32px; }
+    .lang-btn {
+      padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 600;
+      cursor: pointer; border: 1px solid var(--border); background: transparent; color: var(--muted);
+    }
+    .lang-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+    section { margin-bottom: 32px; }
+    h2 { font-size: 18px; font-weight: 600; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    p { margin-bottom: 10px; }
+    ul { padding-left: 20px; margin-bottom: 10px; }
+    li { margin-bottom: 6px; }
+    a { color: var(--accent); text-decoration: underline; }
+    strong { font-weight: 600; }
+    em { font-style: italic; }
+    .email-cta {
+      display: inline-block; margin: 6px 0 4px; padding: 12px 22px; border-radius: 10px;
+      background: var(--accent); color: #fff; text-decoration: none; font-weight: 600; font-size: 16px;
+    }
+    .notice {
+      background: rgba(249,115,22,0.08); border: 1px solid rgba(249,115,22,0.25);
+      border-radius: 8px; padding: 14px 16px; margin: 10px 0;
+      font-size: 14px;
+    }
+    .footer-sig {
+      margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border);
+      font-size: 13px; color: var(--muted); line-height: 1.9;
+    }
+    .footer-sig a { color: var(--muted); }
+    .footer-sig a:hover { color: var(--text); }
+
+    [data-lang] { display: block; }
+    body.en [data-lang="fr"] { display: none; }
+    body.fr [data-lang="en"] { display: none; }
+  </style>
+</head>
+<body class="fr">
+<div class="container">
+
+  <a class="back" href="/">← PowerQuest</a>
+
+  <div class="lang-switch">
+    <button class="lang-btn active" onclick="setLang('fr')" id="btn-fr">Français</button>
+    <button class="lang-btn" onclick="setLang('en')" id="btn-en">English</button>
+  </div>
+
+  <!-- ===================== FRENCH ===================== -->
+  <div data-lang="fr">
+    <h1>Contact &amp; support</h1>
+    <p class="date">Une question, un bug, une demande ? On répond.</p>
+
+    <section>
+      <h2>Nous écrire</h2>
+      <p>
+        Le moyen le plus simple et le plus rapide de nous joindre est l'e-mail. Nous lisons
+        chaque message et répondons généralement sous <strong>2 à 3 jours ouvrés</strong>.
+      </p>
+      <p>
+        <a class="email-cta" href="mailto:powerquest.app@gmail.com?subject=Support%20PowerQuest">
+          powerquest.app@gmail.com
+        </a>
+      </p>
+      <p class="notice">
+        Pour un traitement plus rapide, précise dans ton message : ton modèle d'iPhone,
+        ta version d'iOS, la version de l'app (Réglages → À propos), et une description
+        des étapes qui mènent au problème (capture d'écran bienvenue).
+      </p>
+    </section>
+
+    <section>
+      <h2>Pour quoi nous contacter</h2>
+      <ul>
+        <li><strong>Aide &amp; bugs</strong> : un souci technique, une fonctionnalité qui ne marche pas comme prévu.</li>
+        <li><strong>Suggestions</strong> : une idée de fonctionnalité, un retour sur l'app.</li>
+        <li><strong>Compte &amp; données (RGPD)</strong> : accès, rectification, suppression, export, opposition. Réponse sous 1 mois maximum (Art. 12(3) RGPD). Tu peux aussi exporter ou supprimer ton compte directement depuis l'app : <em>Profil → Confidentialité</em>.</li>
+        <li><strong>Signaler un contenu</strong> : un post, un commentaire ou un message inapproprié. Tu peux aussi signaler/bloquer directement dans l'app.</li>
+        <li><strong>Mode coach</strong> : aide sur l'invitation d'athlètes, l'assignation de programmes ou la messagerie.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Liens utiles</h2>
+      <ul>
+        <li><a href="/privacy/">Politique de confidentialité</a></li>
+        <li><a href="/terms/">Conditions d'utilisation</a></li>
+      </ul>
+    </section>
+
+    <div class="footer-sig">
+      <strong>PowerQuest</strong><br>
+      Édité par Fabien Duvacher — auto-entrepreneur (France)<br>
+      SIRET : 10031200800012<br>
+      Adresse : 5 rue Aimée Antignac, 35000 Rennes<br>
+      Contact : <a href="mailto:powerquest.app@gmail.com">powerquest.app@gmail.com</a>
+    </div>
+  </div>
+
+  <!-- ===================== ENGLISH ===================== -->
+  <div data-lang="en">
+    <h1>Contact &amp; support</h1>
+    <p class="date">A question, a bug, a request? We're here.</p>
+
+    <section>
+      <h2>Get in touch</h2>
+      <p>
+        The easiest and fastest way to reach us is by email. We read every message and
+        usually reply within <strong>2–3 business days</strong>.
+      </p>
+      <p>
+        <a class="email-cta" href="mailto:powerquest.app@gmail.com?subject=PowerQuest%20Support">
+          powerquest.app@gmail.com
+        </a>
+      </p>
+      <p class="notice">
+        For a faster resolution, please include in your message: your iPhone model,
+        your iOS version, the app version (Settings → About), and a description of the
+        steps that lead to the issue (a screenshot helps).
+      </p>
+    </section>
+
+    <section>
+      <h2>What to contact us about</h2>
+      <ul>
+        <li><strong>Help &amp; bugs</strong>: a technical issue, a feature not working as expected.</li>
+        <li><strong>Suggestions</strong>: a feature idea, feedback on the app.</li>
+        <li><strong>Account &amp; data (GDPR)</strong>: access, rectification, deletion, export, objection. Reply within 1 month maximum (Art. 12(3) GDPR). You can also export or delete your account directly in the app: <em>Profile → Privacy</em>.</li>
+        <li><strong>Report content</strong>: an inappropriate post, comment or message. You can also report/block directly in the app.</li>
+        <li><strong>Coach mode</strong>: help with inviting athletes, assigning programs or messaging.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Useful links</h2>
+      <ul>
+        <li><a href="/privacy/">Privacy Policy</a></li>
+        <li><a href="/terms/">Terms of Use</a></li>
+      </ul>
+    </section>
+
+    <div class="footer-sig">
+      <strong>PowerQuest</strong><br>
+      Published by Fabien Duvacher — sole trader (France)<br>
+      SIRET: 10031200800012<br>
+      Address: 5 rue Aimée Antignac, 35000 Rennes<br>
+      Contact: <a href="mailto:powerquest.app@gmail.com">powerquest.app@gmail.com</a>
+    </div>
+  </div>
+
+</div>
+<script>
+  function setLang(lang) {
+    document.body.className = lang;
+    document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.documentElement.lang = lang;
+  }
+  const browserLang = (navigator.language || 'fr').startsWith('fr') ? 'fr' : 'en';
+  setLang(browserLang);
+</script>
+</body>
+</html>
