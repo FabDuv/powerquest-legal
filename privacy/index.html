@@ -99,10 +99,15 @@
         </li>
         <li>
           <strong>Santé</strong> (iOS, si vous autorisez HealthKit) : pas quotidiens, fréquence
-          cardiaque, dépense calorique, distance. Ces données sont lues localement via HealthKit et
-          envoyées à nos serveurs uniquement lors de la validation d'une séance.
+          cardiaque, dépense calorique (calories actives), distance et durée des séances. Ces données
+          sont lues via HealthKit et envoyées à nos serveurs (Supabase, UE) lors de la validation ou
+          de l'import d'une séance, afin d'afficher votre activité et votre progression.
           <strong>Les données de santé ne sont jamais utilisées à des fins publicitaires,
           ni partagées avec des tiers à des fins de profilage ou de monétisation.</strong>
+          Si vous choisissez de <strong>publier une séance</strong> dans le feed social, certaines
+          statistiques que vous sélectionnez (durée, distance, <strong>calories</strong>) peuvent
+          devenir visibles par les autres utilisateurs ; <strong>votre fréquence cardiaque n'est
+          jamais publiée</strong> et reste visible uniquement par vous (et, le cas échéant, votre coach).
         </li>
         <li>
           <strong>Social</strong> (si profil public activé) : posts d'activité, commentaires,
@@ -110,9 +115,19 @@
           (demandes d'ami envoyées/reçues/acceptées).
         </li>
         <li>
-          <strong>Modération</strong> : en cas de signalement (post, commentaire ou message),
-          nous conservons votre identifiant, le contenu signalé et le motif, pour la durée
-          nécessaire au traitement du litige.
+          <strong>Photo de profil</strong> (facultative) : si vous choisissez d'ajouter une photo
+          à la place de l'emoji, elle est <strong>affichée publiquement</strong> à côté de votre
+          pseudo (feed, commentaires, listes d'abonnés). L'image est stockée en
+          <strong>remplacement</strong> de la précédente (aucun historique conservé) et
+          <strong>ne fait l'objet d'aucun traitement de reconnaissance faciale ni biométrique</strong> :
+          elle sert uniquement à l'affichage. Vous pouvez la retirer à tout moment (retour à l'emoji),
+          ce qui la supprime définitivement. Vous garantissez détenir les droits sur l'image et,
+          si une personne y est identifiable, son consentement (cf. CGU).
+        </li>
+        <li>
+          <strong>Modération</strong> : en cas de signalement (post, commentaire, message
+          ou <strong>photo de profil / utilisateur</strong>), nous conservons votre identifiant,
+          le contenu signalé et le motif, pour la durée nécessaire au traitement du litige.
         </li>
         <li>
           <strong>Coach / athlète</strong> : relations coach↔athlète, programmes assignés,
@@ -161,7 +176,7 @@
         </li>
         <li>
           <strong>Consentement (Art. 6(1)(a))</strong> : publicité ciblée (ATT), profil public
-          et social.
+          et social (dont la <strong>photo de profil facultative</strong>, retirable à tout moment).
         </li>
         <li>
           <strong>Données de santé HealthKit (Art. 9(2)(a))</strong> : consentement explicite
@@ -306,10 +321,15 @@
         </li>
         <li>
           <strong>Health</strong> (iOS only, if you grant HealthKit access): daily steps, heart
-          rate, calories burned, distance. This data is read locally via HealthKit and sent to
-          our servers only when you confirm a completed session.
+          rate, calories burned (active energy), distance and workout duration. This data is read
+          via HealthKit and sent to our servers (Supabase, EU) when you confirm or import a session,
+          in order to display your activity and progress.
           <strong>Health data is never used for advertising purposes, nor shared with third
           parties for profiling or monetisation.</strong>
+          If you choose to <strong>share a workout</strong> in the social feed, certain stats you
+          select (duration, distance, <strong>calories</strong>) may become visible to other users;
+          <strong>your heart rate is never published</strong> and stays visible only to you (and,
+          where applicable, your coach).
         </li>
         <li>
           <strong>Social</strong> (if public profile enabled): activity posts, comments, likes,
@@ -317,9 +337,18 @@
           sent/received/accepted).
         </li>
         <li>
-          <strong>Moderation</strong>: if you report content (post, comment or message), we
-          retain your identifier, the reported content and the reason, for the duration
-          necessary to resolve the report.
+          <strong>Profile photo</strong> (optional): if you choose to add a photo instead of the
+          emoji, it is <strong>displayed publicly</strong> next to your username (feed, comments,
+          follower lists). The image is stored by <strong>overwriting</strong> the previous one
+          (no history kept) and is <strong>not subject to any facial-recognition or biometric
+          processing</strong>: it is used for display only. You can remove it at any time (back to
+          the emoji), which deletes it permanently. You warrant that you hold the rights to the
+          image and, if a person is identifiable in it, their consent (see Terms).
+        </li>
+        <li>
+          <strong>Moderation</strong>: if you report content (post, comment, message or
+          <strong>profile photo / user</strong>), we retain your identifier, the reported content
+          and the reason, for the duration necessary to resolve the report.
         </li>
         <li>
           <strong>Coach / athlete</strong>: coach↔athlete relationships, assigned programs,
@@ -367,7 +396,8 @@
         </li>
         <li>
           <strong>Consent (Art. 6(1)(a))</strong>: personalised advertising (ATT),
-          public profile and social features.
+          public profile and social features (including the <strong>optional profile photo</strong>,
+          removable at any time).
         </li>
         <li>
           <strong>Health data HealthKit (Art. 9(2)(a))</strong>: explicit consent collected
