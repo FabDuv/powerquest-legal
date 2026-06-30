@@ -39,6 +39,7 @@
     a { color: var(--accent); text-decoration: underline; }
     strong { font-weight: 600; }
     em { font-style: italic; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; }
     .notice {
       background: rgba(249,115,22,0.08); border: 1px solid rgba(249,115,22,0.25);
       border-radius: 8px; padding: 14px 16px; margin: 10px 0;
@@ -69,12 +70,20 @@
   <!-- ===================== FRENCH ===================== -->
   <div data-lang="fr">
     <h1>Politique de confidentialité</h1>
-    <p class="date">Dernière mise à jour : 31 mai 2026</p>
+    <p class="date">Dernière mise à jour : 30 juin 2026 · Version 2.1 (iOS + Web)</p>
+
+    <p>
+      PowerQuest (« l'Application », « le Service ») est une application de suivi
+      d'entraînement disponible sur <strong>iOS</strong> et sur le <strong>web</strong>.
+      Les deux versions partagent le même compte et la même base de données : cette
+      politique couvre les deux.
+    </p>
 
     <section>
       <h2>1. Responsable du traitement</h2>
       <p>
-        PowerQuest est une application iOS de suivi sportif.
+        PowerQuest est édité par <strong>Fabien Duvacher</strong> (éditeur individuel),
+        5 rue Aimée Antignac, 35000 Rennes, France.
         Contact : <a href="mailto:powerquest.app@gmail.com">powerquest.app@gmail.com</a>.
       </p>
       <p>
@@ -86,82 +95,104 @@
 
     <section>
       <h2>2. Données collectées</h2>
-      <p>Lorsque vous utilisez PowerQuest, nous collectons :</p>
+      <p>Lorsque vous utilisez PowerQuest, nous traitons :</p>
       <ul>
         <li>
-          <strong>Compte</strong> : adresse email relayée ou masquée via Sign in with Apple
-          (un identifiant opaque unique par utilisateur, non lié à votre Apple ID), nom d'utilisateur,
-          avatar, ville (optionnelle), bio.
+          <strong>Compte</strong> : adresse e-mail et identifiant du fournisseur d'identité.
+          La connexion se fait via <strong>Apple</strong> (Sign in with Apple — un identifiant
+          opaque unique, non lié à votre Apple ID) sur iOS, et via <strong>Google ou Apple</strong>
+          sur le web.
+        </li>
+        <li>
+          <strong>Profil</strong> : pseudo, nom affiché, emoji ou photo d'avatar, bio,
+          <strong>ville</strong> (optionnelle), réglages de visibilité.
         </li>
         <li>
           <strong>Activité sportive</strong> : programmes, plannings, séances complétées, exercices
           personnalisés, séries/reps/poids, notes RPE.
         </li>
         <li>
-          <strong>Santé</strong> (iOS, si vous autorisez HealthKit) : pas quotidiens, fréquence
-          cardiaque, dépense calorique (calories actives), distance et durée des séances. Ces données
-          sont lues via HealthKit et envoyées à nos serveurs (Supabase, UE) lors de la validation ou
-          de l'import d'une séance, afin d'afficher votre activité et votre progression.
-          <strong>Les données de santé ne sont jamais utilisées à des fins publicitaires,
-          ni partagées avec des tiers à des fins de profilage ou de monétisation.</strong>
+          <strong>Santé / activité</strong> (Art. 9 RGPD, si vous autorisez HealthKit sur iOS) :
+          fréquence cardiaque, calories actives, distance, durée, pas, allure. Ces données sont lues
+          via HealthKit et les métriques dérivées sont envoyées à nos serveurs (Supabase, France/UE)
+          lors de la validation ou de l'import d'une séance, afin d'afficher votre activité et votre
+          progression. <strong>Les données de santé ne sont jamais utilisées à des fins
+          publicitaires, ni partagées avec des tiers à des fins de profilage ou de monétisation.</strong>
           Si vous choisissez de <strong>publier une séance</strong> dans le feed social, certaines
-          statistiques que vous sélectionnez (durée, distance, <strong>calories</strong>) peuvent
-          devenir visibles par les autres utilisateurs ; <strong>votre fréquence cardiaque n'est
-          jamais publiée</strong> et reste visible uniquement par vous (et, le cas échéant, votre coach).
+          statistiques que vous sélectionnez (durée, distance, calories) peuvent devenir visibles par
+          les autres utilisateurs ; <strong>votre fréquence cardiaque n'est jamais publiée</strong> et
+          reste visible uniquement par vous (et, le cas échéant, votre coach).
+        </li>
+        <li>
+          <strong>Localisation (GPS)</strong> : pendant une séance course/vélo que vous lancez, le GPS
+          de l'appareil sert à calculer <strong>distance, allure et vitesse</strong>. La position est
+          traitée <strong>uniquement sur votre appareil</strong> : <strong>aucune coordonnée ni tracé
+          n'est stocké ni transmis</strong> — seule la distance agrégée (un nombre) est enregistrée
+          avec votre séance.
         </li>
         <li>
           <strong>Social</strong> (si profil public activé) : posts d'activité, commentaires,
-          likes, programmes partagés, abonnements (follows) et <strong>relations d'amitié</strong>
-          (demandes d'ami envoyées/reçues/acceptées).
+          likes, programmes partagés, abonnements (follows) et <strong>relations d'amitié</strong>.
         </li>
         <li>
           <strong>Photo de profil</strong> (facultative) : si vous choisissez d'ajouter une photo
           à la place de l'emoji, elle est <strong>affichée publiquement</strong> à côté de votre
-          pseudo (feed, commentaires, listes d'abonnés). L'image est stockée en
-          <strong>remplacement</strong> de la précédente (aucun historique conservé) et
-          <strong>ne fait l'objet d'aucun traitement de reconnaissance faciale ni biométrique</strong> :
-          elle sert uniquement à l'affichage. Vous pouvez la retirer à tout moment (retour à l'emoji),
-          ce qui la supprime définitivement. Vous garantissez détenir les droits sur l'image et,
-          si une personne y est identifiable, son consentement (cf. CGU).
+          pseudo. L'image est stockée en <strong>remplacement</strong> de la précédente (aucun
+          historique conservé) et <strong>ne fait l'objet d'aucun traitement de reconnaissance faciale
+          ni biométrique</strong>. Vous pouvez la retirer à tout moment (retour à l'emoji), ce qui la
+          supprime définitivement.
         </li>
         <li>
           <strong>Modération</strong> : en cas de signalement (post, commentaire, message
-          ou <strong>photo de profil / utilisateur</strong>), nous conservons votre identifiant,
-          le contenu signalé et le motif, pour la durée nécessaire au traitement du litige.
+          ou photo de profil / utilisateur), nous conservons votre identifiant, le contenu signalé
+          et le motif, pour la durée nécessaire au traitement du litige.
         </li>
         <li>
           <strong>Coach / athlète</strong> : relations coach↔athlète, programmes assignés,
           séances validées, <strong>messages privés coach↔athlète</strong> et
-          <strong>commentaires privés de séance</strong> (visibles uniquement par votre coach).
+          <strong>notes/commentaires privés de séance</strong> (visibles uniquement par votre coach).
         </li>
         <li>
-          <strong>Notifications</strong> : un token de notification push (APNs Apple) et un
+          <strong>Synchronisation montre Garmin</strong> (si vous connectez une montre) : lorsque
+          vous envoyez une séance ou un plan vers votre montre Garmin, les données transitent par
+          l'application <strong>Garmin Connect Mobile</strong> installée sur votre appareil. Les
+          résultats peuvent être réimportés dans PowerQuest.
+        </li>
+        <li>
+          <strong>Notifications</strong> : un token de notification push (Apple APNs) et un
           identifiant d'appareil sont enregistrés pour vous envoyer les alertes (likes,
           commentaires, amis, messages, séances), et un <strong>centre de notifications
           in-app</strong> conserve l'historique de ces alertes.
         </li>
         <li>
-          <strong>Publicité</strong> : si vous utilisez la version gratuite, AdMob (Google)
-          peut collecter l'IDFA (Identifier for Advertisers) si vous avez accordé le suivi via
-          le prompt « App Tracking Transparency ». En cas de refus, AdMob affiche uniquement
-          des publicités contextuelles sans identifiant personnel.
+          <strong>Publicité</strong> : en version gratuite, des publicités sont diffusées via
+          <strong>Google AdMob</strong> (iOS) et <strong>Google AdSense</strong> (web). Sur iOS,
+          AdMob peut collecter l'IDFA si vous avez accordé le suivi via le prompt « App Tracking
+          Transparency ». Sur le web, des cookies publicitaires ne sont déposés qu'après votre
+          consentement (voir notre <a href="/cookies/">Politique cookies</a>). En cas de refus, des
+          publicités <strong>non personnalisées</strong> (sans identifiant de ciblage) peuvent être
+          affichées.
         </li>
         <li>
-          <strong>Données techniques</strong> : adresse IP, type d'appareil, version iOS,
-          version de l'app, horodatages de connexion, logs d'erreur et de performance
-          (collectés par Sentry pour la détection de bugs).
+          <strong>Données techniques</strong> : adresse IP, type d'appareil, version iOS/app,
+          horodatages de connexion, journaux d'erreur et de performance (collectés par Sentry pour
+          la détection de bugs), et stockage local (session, consentement publicitaire, état
+          d'onboarding).
         </li>
       </ul>
+      <p>Nous <strong>ne vendons jamais</strong> vos données.</p>
     </section>
 
     <section>
       <h2>3. Finalités</h2>
       <ul>
         <li>Fournir le service (synchronisation, historique, récapitulatif de séance)</li>
-        <li>Permettre le mode coach/athlète (attribution de séances, suivi)</li>
+        <li>Mesurer distance, allure et vitesse d'une séance course/vélo via le GPS (traitement local)</li>
+        <li>Synchroniser vos séances/plans avec une montre Garmin (si vous la connectez)</li>
+        <li>Permettre le mode coach/athlète (attribution de séances, suivi, messagerie)</li>
         <li>Modérer le contenu communautaire et prévenir les abus</li>
-        <li>Envoyer des notifications push de séances assignées par un coach</li>
-        <li>Détecter les bugs et monitorer les performances (Sentry — données anonymisées)</li>
+        <li>Envoyer des notifications push (séances assignées par un coach, activité sociale)</li>
+        <li>Détecter les bugs et monitorer les performances (Sentry)</li>
         <li>Diffuser des publicités contextuelles ou personnalisées en version gratuite</li>
         <li>Répondre à vos demandes de support</li>
       </ul>
@@ -172,110 +203,137 @@
       <ul>
         <li>
           <strong>Exécution du contrat (Art. 6(1)(b))</strong> : fourniture du service de base
-          (programmes, séances, synchronisation).
+          (programmes, séances, synchronisation), mesure GPS de distance/allure (fonctionnalité que
+          vous déclenchez vous-même, traitement local), synchronisation montre Garmin.
         </li>
         <li>
-          <strong>Consentement (Art. 6(1)(a))</strong> : publicité ciblée (ATT), profil public
-          et social (dont la <strong>photo de profil facultative</strong>, retirable à tout moment).
+          <strong>Consentement (Art. 6(1)(a))</strong> : publicité (ATT sur iOS, bandeau cookies sur
+          le web), profil public et social (dont la photo de profil facultative, retirable à tout
+          moment), coaching.
         </li>
         <li>
           <strong>Données de santé HealthKit (Art. 9(2)(a))</strong> : consentement explicite
           accordé lors de l'inscription via une case à cocher dédiée dans l'app, en plus du
-          prompt iOS HealthKit (qui constitue l'accès technique, distinct du consentement RGPD).
+          prompt iOS HealthKit (accès technique, distinct du consentement RGPD).
           Vous pouvez retirer ce consentement via <em>Réglages iOS → Santé → Accès → PowerQuest</em> ;
-          pour supprimer les données déjà synchronisées, utilisez « Supprimer mon compte » ou
-          contactez-nous.
+          pour supprimer les données déjà synchronisées, utilisez « Supprimer mon compte ».
         </li>
         <li>
           <strong>Intérêt légitime (Art. 6(1)(f))</strong> : modération du contenu,
-          sécurité des comptes, détection de bugs (Sentry), push notifications coach.
+          sécurité des comptes, détection de bugs (Sentry), push coach.
         </li>
       </ul>
     </section>
 
     <section>
-      <h2>5. Sous-traitants</h2>
+      <h2>5. Sous-traitants et destinataires</h2>
       <ul>
-        <li><strong>Supabase</strong> (UE, Irlande) — base de données et authentification</li>
-        <li><strong>Vercel</strong> (US — Standard Contractual Clauses) — hébergement de ces pages légales</li>
-        <li><strong>Apple</strong> — Sign in with Apple, HealthKit, APNs (push notifications), App Store</li>
-        <li><strong>Google / AdMob</strong> — publicités in-app (iOS)</li>
-        <li><strong>Sentry</strong> (US — SCC) — rapports de crash et données de performance anonymes</li>
+        <li><strong>Supabase</strong> (infrastructure Amazon Web Services, région <strong>France / UE — Paris</strong>) — base de données, authentification, stockage</li>
+        <li><strong>Vercel</strong> (US — Clauses Contractuelles Types) — hébergement de l'application web et de ces pages</li>
+        <li><strong>Apple</strong> — Sign in with Apple, HealthKit (lecture locale), APNs (push), App Store</li>
+        <li><strong>Google</strong> (Google Ireland Ltd / Google LLC) — connexion Google (web), publicité AdSense (web) / AdMob (iOS), gestion du consentement</li>
+        <li><strong>Garmin</strong> (Garmin Ltd) — envoi de séances/plans vers votre montre et import des résultats, via l'app Garmin Connect Mobile installée sur votre appareil</li>
+        <li><strong>Sentry</strong> (iOS) — rapports d'erreurs et de performance, <strong>rattachés à votre identifiant de compte</strong> pour le diagnostic</li>
       </ul>
+      <p class="notice">
+        Les <strong>données de localisation GPS</strong> utilisées pendant une séance sont traitées
+        <strong>localement sur votre appareil</strong> et ne sont transmises à aucun de ces
+        prestataires ni à nos serveurs (seule la distance calculée est enregistrée avec la séance).
+      </p>
     </section>
 
     <section>
-      <h2>6. Durée de conservation</h2>
+      <h2>6. Transferts hors UE</h2>
+      <p>
+        Vos données principales (compte, profil, entraînement, santé/activité, social, coaching) sont
+        <strong>hébergées dans l'Union européenne</strong> (Supabase, AWS région Paris / <code>eu-west</code>)
+        et ne font donc <strong>pas l'objet d'un transfert</strong> hors UE pour leur hébergement.
+      </p>
+      <p>Certains prestataires annexes peuvent traiter des données limitées en dehors de l'UE :</p>
+      <ul>
+        <li><strong>Google</strong> (connexion Google, publicité AdSense) ;</li>
+        <li><strong>Apple</strong> (Sign in with Apple, APNs) ;</li>
+        <li><strong>Vercel</strong> (États-Unis) — diffusion de l'app web et journaux techniques ;</li>
+        <li><strong>Garmin</strong> — la transmission de séances vers votre montre transite par l'app Garmin Connect Mobile ; Garmin peut traiter ces données hors UE selon ses propres conditions ;</li>
+        <li><strong>Sentry</strong> — supervision des erreurs, hébergement susceptible d'être aux États-Unis.</li>
+      </ul>
+      <p>
+        Lorsqu'un transfert vers les États-Unis a lieu, il est encadré par les <strong>Clauses
+        Contractuelles Types</strong> de la Commission européenne et, le cas échéant, par le
+        <strong>Data Privacy Framework</strong> UE–États-Unis (auquel Google LLC est certifié).
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Durée de conservation</h2>
       <ul>
         <li>
           <strong>Compte actif</strong> : données conservées tant que le compte est actif. En cas
-          d'inactivité de 3 ans (durée justifiée pour permettre de reprendre après une blessure ou
-          une pause), archivage possible après notification préalable par email, puis suppression
+          d'inactivité de 3 ans, archivage possible après notification par e-mail, puis suppression
           définitive au-delà de 6 mois d'archivage.
         </li>
-        <li>
-          <strong>Données de modération</strong> : conservées 1 an après résolution du signalement.
-        </li>
-        <li>
-          <strong>Journaux techniques (Sentry, logs de connexion)</strong> : 1 an maximum.
-        </li>
+        <li><strong>Localisation GPS</strong> : non conservée (seule la distance agrégée l'est, avec la séance).</li>
+        <li><strong>Données de modération</strong> : conservées 1 an après résolution du signalement.</li>
+        <li><strong>Journaux techniques (Sentry, logs de connexion)</strong> : 12 mois maximum.</li>
+        <li><strong>Consentement publicitaire</strong> : conservé jusqu'à son retrait.</li>
       </ul>
       <p>
-        Suppression à la demande : <em>Profil → Confidentialité → Supprimer mon compte</em>.
+        Suppression à la demande : <em>Profil → Modifier le profil → Supprimer mon compte</em>.
         La suppression est <strong>immédiate et définitive</strong>, incluant les données de santé
         synchronisées, les séances, les posts et toutes les données associées.
-      </p>
-      <p>
-        En cas de violation de données susceptible d'affecter vos droits, vous serez informé dans
-        les meilleurs délais conformément à l'Art. 34 RGPD.
       </p>
     </section>
 
     <section>
-      <h2>7. Vos droits (RGPD)</h2>
-      <p>Vous disposez des droits suivants. Délai de réponse : 1 mois maximum.</p>
+      <h2>8. Vos droits (RGPD)</h2>
+      <p>Délai de réponse : 1 mois maximum.</p>
       <ul>
-        <li><strong>Accès (Art. 15)</strong> : bouton « Exporter mes données » dans l'app</li>
+        <li><strong>Accès (Art. 15)</strong> et <strong>portabilité (Art. 20)</strong> : « Exporter mes données » (JSON) dans l'app</li>
         <li><strong>Rectification (Art. 16)</strong> : modifier votre profil dans l'app</li>
-        <li><strong>Effacement (Art. 17)</strong> : bouton « Supprimer mon compte »</li>
-        <li><strong>Portabilité (Art. 20)</strong> : export JSON disponible</li>
-        <li><strong>Limitation (Art. 18)</strong> : nous contacter par email</li>
-        <li><strong>Opposition (Art. 21)</strong> : vous opposer aux traitements fondés sur l'intérêt
-          légitime (modération, Sentry) en nous contactant par email</li>
-        <li><strong>Retrait du consentement</strong> : publicité via prompt ATT (iOS) ;
-          HealthKit via Réglages iOS</li>
+        <li><strong>Effacement (Art. 17)</strong> : « Supprimer mon compte »</li>
+        <li><strong>Limitation (Art. 18)</strong> : nous contacter par e-mail</li>
+        <li><strong>Opposition (Art. 21)</strong> : vous opposer aux traitements fondés sur l'intérêt légitime (modération, Sentry)</li>
+        <li><strong>Retrait du consentement</strong> : publicité via prompt ATT (iOS) ou « Gérer mes choix publicitaires » (web) ; HealthKit via Réglages iOS</li>
         <li><strong>Réclamation</strong> : <a href="https://www.cnil.fr/fr/plaintes" target="_blank">CNIL</a></li>
       </ul>
     </section>
 
     <section>
-      <h2>8. Sécurité</h2>
+      <h2>9. Sécurité</h2>
       <p>
-        Données chiffrées en transit (TLS 1.3) et au repos (base Postgres chiffrée via Supabase).
-        Contrôle d'accès par Row-Level Security (RLS Supabase). Authentification uniquement via
-        Sign in with Apple — aucun mot de passe stocké. En cas de violation de données, la CNIL
-        sera notifiée sous 72h (Art. 33 RGPD) et vous serez informé si nécessaire (Art. 34).
+        Données chiffrées en transit (TLS) et au repos (Postgres chiffré via Supabase), avec
+        contrôle d'accès par Row-Level Security : vous n'accédez qu'à vos propres données (et, pour
+        un coach, à celles de ses athlètes l'ayant rejoint). Vos données de santé brutes (Apple Santé)
+        et les <strong>coordonnées GPS</strong> restent sur votre appareil iOS et ne sont
+        <strong>jamais envoyées à nos serveurs</strong>. En cas de violation de données, la CNIL sera
+        notifiée sous 72h (Art. 33 RGPD) et vous serez informé si nécessaire (Art. 34).
       </p>
     </section>
 
     <section>
-      <h2>9. Mineurs</h2>
+      <h2>10. Mineurs</h2>
       <p>
-        PowerQuest est destiné aux personnes d'au moins <strong>15 ans</strong> en France
-        (Art. 7-1 Loi Informatique et Libertés). Un contrôle d'âge auto-déclaratif est effectué
-        lors de l'inscription. Si votre législation locale impose un âge ou un consentement
-        parental différent, ce seuil s'applique. En cas de doute, demandez à votre représentant
-        légal avant de vous inscrire.
+        PowerQuest est réservé aux personnes d'au moins <strong>15 ans</strong> en France
+        (Art. 7-1 Loi Informatique et Libertés). Une confirmation d'âge est demandée à l'inscription.
+        Si votre législation locale impose un âge ou un consentement parental différent, ce seuil
+        s'applique.
       </p>
     </section>
 
     <section>
-      <h2>10. Modifications</h2>
+      <h2>11. Avertissement santé</h2>
+      <p>
+        PowerQuest <strong>n'est pas un dispositif médical</strong>. Les informations fournies ne
+        remplacent pas un avis médical. Consultez un professionnel de santé avant tout programme
+        sportif, en particulier en cas d'antécédents.
+      </p>
+    </section>
+
+    <section>
+      <h2>12. Modifications</h2>
       <p>
         Cette politique peut être mise à jour. Les modifications substantielles vous seront
         notifiées dans l'app <strong>au moins 30 jours avant leur entrée en vigueur</strong>.
-        Si vous n'acceptez pas les nouvelles conditions, vous pouvez supprimer votre compte
-        sans frais avant leur entrée en vigueur.
       </p>
     </section>
 
@@ -285,19 +343,28 @@
       SIRET : 10031200800012<br>
       Adresse : 5 rue Aimée Antignac, 35000 Rennes<br>
       Contact : <a href="mailto:powerquest.app@gmail.com">powerquest.app@gmail.com</a><br><br>
-      Voir aussi : <a href="https://fabduv.github.io/powerquest-legal/terms/">Conditions d'utilisation</a>
+      Voir aussi :
+      <a href="/terms/">Conditions d'utilisation</a> ·
+      <a href="/cookies/">Politique cookies</a>
     </div>
   </div>
 
   <!-- ===================== ENGLISH ===================== -->
   <div data-lang="en">
     <h1>Privacy Policy</h1>
-    <p class="date">Last updated: May 31, 2026</p>
+    <p class="date">Last updated: June 30, 2026 · Version 2.1 (iOS + Web)</p>
+
+    <p>
+      PowerQuest ("the App", "the Service") is a training-tracking application available on
+      <strong>iOS</strong> and on the <strong>web</strong>. Both versions share the same account
+      and database: this policy covers both.
+    </p>
 
     <section>
       <h2>1. Data Controller</h2>
       <p>
-        PowerQuest is an iOS fitness tracking app.
+        PowerQuest is published by <strong>Fabien Duvacher</strong> (sole trader),
+        5 rue Aimée Antignac, 35000 Rennes, France.
         Contact: <a href="mailto:powerquest.app@gmail.com">powerquest.app@gmail.com</a>.
       </p>
       <p>
@@ -311,77 +378,93 @@
       <h2>2. Data We Collect</h2>
       <ul>
         <li>
-          <strong>Account</strong>: email address relayed or hidden via Sign in with Apple
-          (a unique opaque identifier per user, unrelated to your Apple ID), username, avatar,
-          city (optional), bio.
+          <strong>Account</strong>: email address and identity-provider identifier. Sign-in is via
+          <strong>Apple</strong> (Sign in with Apple — a unique opaque identifier, unrelated to your
+          Apple ID) on iOS, and via <strong>Google or Apple</strong> on the web.
+        </li>
+        <li>
+          <strong>Profile</strong>: username, display name, emoji or photo avatar, bio,
+          <strong>city</strong> (optional), visibility settings.
         </li>
         <li>
           <strong>Training activity</strong>: programs, schedules, completed sessions, custom
           exercises, sets/reps/weight, RPE notes.
         </li>
         <li>
-          <strong>Health</strong> (iOS only, if you grant HealthKit access): daily steps, heart
-          rate, calories burned (active energy), distance and workout duration. This data is read
-          via HealthKit and sent to our servers (Supabase, EU) when you confirm or import a session,
-          in order to display your activity and progress.
-          <strong>Health data is never used for advertising purposes, nor shared with third
-          parties for profiling or monetisation.</strong>
-          If you choose to <strong>share a workout</strong> in the social feed, certain stats you
-          select (duration, distance, <strong>calories</strong>) may become visible to other users;
-          <strong>your heart rate is never published</strong> and stays visible only to you (and,
-          where applicable, your coach).
+          <strong>Health / activity</strong> (Art. 9 GDPR, if you grant HealthKit access on iOS):
+          heart rate, active calories, distance, duration, steps, pace. This data is read via
+          HealthKit and the derived metrics are sent to our servers (Supabase, France/EU) when you
+          confirm or import a session, to display your activity and progress.
+          <strong>Health data is never used for advertising, nor shared with third parties for
+          profiling or monetisation.</strong> If you choose to <strong>share a workout</strong> in
+          the social feed, certain stats you select (duration, distance, calories) may become visible
+          to other users; <strong>your heart rate is never published</strong> and stays visible only
+          to you (and, where applicable, your coach).
+        </li>
+        <li>
+          <strong>Location (GPS)</strong>: during a run/cycling session you start, the device GPS is
+          used to compute <strong>distance, pace and speed</strong>. Location is processed
+          <strong>on your device only</strong>: <strong>no coordinate or track is stored or
+          transmitted</strong> — only the aggregate distance (a number) is saved with your session.
         </li>
         <li>
           <strong>Social</strong> (if public profile enabled): activity posts, comments, likes,
-          shared programs, follows and <strong>friendships</strong> (friend requests
-          sent/received/accepted).
+          shared programs, follows and <strong>friendships</strong>.
         </li>
         <li>
-          <strong>Profile photo</strong> (optional): if you choose to add a photo instead of the
-          emoji, it is <strong>displayed publicly</strong> next to your username (feed, comments,
-          follower lists). The image is stored by <strong>overwriting</strong> the previous one
-          (no history kept) and is <strong>not subject to any facial-recognition or biometric
-          processing</strong>: it is used for display only. You can remove it at any time (back to
-          the emoji), which deletes it permanently. You warrant that you hold the rights to the
-          image and, if a person is identifiable in it, their consent (see Terms).
+          <strong>Profile photo</strong> (optional): if you add a photo instead of the emoji, it is
+          <strong>displayed publicly</strong> next to your username. The image is stored by
+          <strong>overwriting</strong> the previous one (no history kept) and is <strong>not subject
+          to any facial-recognition or biometric processing</strong>. You can remove it at any time
+          (back to the emoji), which deletes it permanently.
         </li>
         <li>
-          <strong>Moderation</strong>: if you report content (post, comment, message or
-          <strong>profile photo / user</strong>), we retain your identifier, the reported content
-          and the reason, for the duration necessary to resolve the report.
+          <strong>Moderation</strong>: if you report content (post, comment, message or profile
+          photo / user), we retain your identifier, the reported content and the reason, for the
+          duration necessary to resolve the report.
         </li>
         <li>
           <strong>Coach / athlete</strong>: coach↔athlete relationships, assigned programs,
           validated sessions, <strong>private coach↔athlete messages</strong> and
-          <strong>private session comments</strong> (visible only to your coach).
+          <strong>private session notes/comments</strong> (visible only to your coach).
+        </li>
+        <li>
+          <strong>Garmin watch sync</strong> (if you connect a watch): when you send a session or
+          plan to your Garmin watch, the data transits through the <strong>Garmin Connect Mobile</strong>
+          app installed on your device. Results may be imported back into PowerQuest.
         </li>
         <li>
           <strong>Notifications</strong>: a push notification token (Apple APNs) and a device
-          identifier are stored to send you alerts (likes, comments, friends, messages,
-          sessions), and an <strong>in-app notification center</strong> keeps a history of
-          these alerts.
+          identifier are stored to send you alerts (likes, comments, friends, messages, sessions),
+          and an <strong>in-app notification center</strong> keeps a history of these alerts.
         </li>
         <li>
-          <strong>Advertising</strong>: if you use the free version, AdMob (Google) may collect
-          your IDFA (Identifier for Advertisers) if you granted tracking via the "App Tracking
-          Transparency" prompt. If you declined, AdMob serves context-only ads without a
-          personal identifier.
+          <strong>Advertising</strong>: in the free version, ads are served via <strong>Google
+          AdMob</strong> (iOS) and <strong>Google AdSense</strong> (web). On iOS, AdMob may collect
+          your IDFA if you granted tracking via the "App Tracking Transparency" prompt. On the web,
+          advertising cookies are only set after your consent (see our
+          <a href="/cookies/">Cookie Policy</a>). If you decline, <strong>non-personalised</strong>
+          ads (without a targeting identifier) may be shown.
         </li>
         <li>
-          <strong>Technical data</strong>: IP address, device type, iOS version, app version,
-          connection timestamps, error and performance logs (collected by Sentry for bug detection).
+          <strong>Technical data</strong>: IP address, device type, iOS/app version, connection
+          timestamps, error and performance logs (collected by Sentry for bug detection), and local
+          storage (session, ad consent, onboarding state).
         </li>
       </ul>
+      <p>We <strong>never sell</strong> your data.</p>
     </section>
 
     <section>
       <h2>3. Purposes</h2>
       <ul>
         <li>Provide the service (sync, history, session recap)</li>
-        <li>Enable the coach/athlete mode (session assignment, tracking)</li>
+        <li>Measure distance, pace and speed of a run/cycling session via GPS (local processing)</li>
+        <li>Sync your sessions/plans with a Garmin watch (if you connect it)</li>
+        <li>Enable the coach/athlete mode (session assignment, tracking, messaging)</li>
         <li>Moderate community content and prevent abuse</li>
-        <li>Send push notifications for coach-assigned sessions</li>
-        <li>Detect bugs and monitor performance (Sentry — anonymised data)</li>
+        <li>Send push notifications (coach-assigned sessions, social activity)</li>
+        <li>Detect bugs and monitor performance (Sentry)</li>
         <li>Show contextual or personalised ads in the free version</li>
         <li>Respond to support requests</li>
       </ul>
@@ -391,114 +474,137 @@
       <h2>4. Legal Basis (GDPR)</h2>
       <ul>
         <li>
-          <strong>Contract performance (Art. 6(1)(b))</strong>: core service delivery
-          (programs, sessions, sync).
+          <strong>Contract performance (Art. 6(1)(b))</strong>: core service delivery (programs,
+          sessions, sync), GPS distance/pace measurement (a feature you trigger yourself, processed
+          locally), Garmin watch sync.
         </li>
         <li>
-          <strong>Consent (Art. 6(1)(a))</strong>: personalised advertising (ATT),
-          public profile and social features (including the <strong>optional profile photo</strong>,
-          removable at any time).
+          <strong>Consent (Art. 6(1)(a))</strong>: advertising (ATT on iOS, cookie banner on web),
+          public profile and social features (including the optional profile photo, removable at any
+          time), coaching.
         </li>
         <li>
-          <strong>Health data HealthKit (Art. 9(2)(a))</strong>: explicit consent collected
-          at sign-up via a dedicated checkbox in the app, in addition to the iOS HealthKit
-          prompt (which governs API access only, not GDPR consent). You may withdraw this
-          consent via <em>iOS Settings → Health → Apps → PowerQuest</em>; to delete already
-          synced health data, use "Delete my account" or contact us.
+          <strong>Health data HealthKit (Art. 9(2)(a))</strong>: explicit consent collected at
+          sign-up via a dedicated checkbox in the app, in addition to the iOS HealthKit prompt
+          (technical access, distinct from GDPR consent). You may withdraw via
+          <em>iOS Settings → Health → Apps → PowerQuest</em>; to delete already synced data, use
+          "Delete my account".
         </li>
         <li>
-          <strong>Legitimate interest (Art. 6(1)(f))</strong>: content moderation, account
-          security, bug detection (Sentry), coach push notifications.
+          <strong>Legitimate interest (Art. 6(1)(f))</strong>: content moderation, account security,
+          bug detection (Sentry), coach push notifications.
         </li>
       </ul>
     </section>
 
     <section>
-      <h2>5. Sub-processors</h2>
+      <h2>5. Sub-processors and recipients</h2>
       <ul>
-        <li><strong>Supabase</strong> (EU, Ireland) — database and authentication</li>
-        <li><strong>Vercel</strong> (US — Standard Contractual Clauses) — hosting of these legal pages</li>
-        <li><strong>Apple</strong> — Sign in with Apple, HealthKit, APNs, App Store</li>
-        <li><strong>Google / AdMob</strong> — in-app advertising</li>
-        <li><strong>Sentry</strong> (US — SCC) — anonymous crash reports and performance data</li>
+        <li><strong>Supabase</strong> (Amazon Web Services infrastructure, <strong>France / EU — Paris</strong> region) — database, authentication, storage</li>
+        <li><strong>Vercel</strong> (US — Standard Contractual Clauses) — hosting of the web app and these pages</li>
+        <li><strong>Apple</strong> — Sign in with Apple, HealthKit (local read), APNs (push), App Store</li>
+        <li><strong>Google</strong> (Google Ireland Ltd / Google LLC) — Google sign-in (web), AdSense (web) / AdMob (iOS) advertising, consent management</li>
+        <li><strong>Garmin</strong> (Garmin Ltd) — sending sessions/plans to your watch and importing results, via the Garmin Connect Mobile app on your device</li>
+        <li><strong>Sentry</strong> (iOS) — error and performance reports, <strong>linked to your account identifier</strong> for diagnostics</li>
       </ul>
+      <p class="notice">
+        The <strong>GPS location data</strong> used during a session is processed
+        <strong>locally on your device</strong> and is transmitted to none of these processors nor
+        to our servers (only the computed distance is saved with the session).
+      </p>
     </section>
 
     <section>
-      <h2>6. Retention</h2>
+      <h2>6. International Transfers</h2>
+      <p>
+        Your main data (account, profile, training, health/activity, social, coaching) is
+        <strong>hosted in the European Union</strong> (Supabase, AWS Paris / <code>eu-west</code>
+        region) and is therefore <strong>not transferred</strong> outside the EU for hosting.
+      </p>
+      <p>Some ancillary processors may handle limited data outside the EU:</p>
+      <ul>
+        <li><strong>Google</strong> (Google sign-in, AdSense advertising);</li>
+        <li><strong>Apple</strong> (Sign in with Apple, APNs);</li>
+        <li><strong>Vercel</strong> (United States) — web app delivery and technical logs;</li>
+        <li><strong>Garmin</strong> — sending sessions to your watch transits through the Garmin Connect Mobile app; Garmin may process this data outside the EU under its own terms;</li>
+        <li><strong>Sentry</strong> — error monitoring, possibly hosted in the United States.</li>
+      </ul>
+      <p>
+        Where a transfer to the United States occurs, it is governed by the European Commission's
+        <strong>Standard Contractual Clauses</strong> and, where applicable, the EU–US
+        <strong>Data Privacy Framework</strong> (to which Google LLC is certified).
+      </p>
+    </section>
+
+    <section>
+      <h2>7. Retention</h2>
       <ul>
         <li>
           <strong>Active account</strong>: data kept as long as the account is active. After
-          3 years of inactivity (a period justified to allow resuming after injury or a break),
-          archival after prior email notice, then permanent deletion after 6 months of archival.
+          3 years of inactivity, archival after prior email notice, then permanent deletion after
+          6 months of archival.
         </li>
-        <li>
-          <strong>Moderation data</strong>: retained for 1 year after the report is resolved.
-        </li>
-        <li>
-          <strong>Technical logs (Sentry, connection logs)</strong>: maximum 1 year.
-        </li>
+        <li><strong>GPS location</strong>: not retained (only the aggregate distance is, with the session).</li>
+        <li><strong>Moderation data</strong>: retained for 1 year after the report is resolved.</li>
+        <li><strong>Technical logs (Sentry, connection logs)</strong>: maximum 12 months.</li>
+        <li><strong>Advertising consent</strong>: kept until withdrawn.</li>
       </ul>
       <p>
-        On-demand deletion: <em>Profile → Privacy → Delete my account</em>. Deletion is
+        On-demand deletion: <em>Profile → Edit profile → Delete my account</em>. Deletion is
         <strong>immediate and permanent</strong>, including synced health data, sessions, posts
         and all associated data.
       </p>
-      <p>
-        In the event of a data breach that may affect your rights, you will be informed promptly
-        in accordance with Art. 34 GDPR.
-      </p>
     </section>
 
     <section>
-      <h2>7. Your Rights (GDPR)</h2>
+      <h2>8. Your Rights (GDPR)</h2>
       <p>Response time: maximum 1 month.</p>
       <ul>
-        <li><strong>Access (Art. 15)</strong>: "Export my data" button in the app</li>
+        <li><strong>Access (Art. 15)</strong> and <strong>portability (Art. 20)</strong>: "Export my data" (JSON) in the app</li>
         <li><strong>Rectification (Art. 16)</strong>: edit your profile in the app</li>
-        <li><strong>Erasure (Art. 17)</strong>: "Delete my account" button</li>
-        <li><strong>Portability (Art. 20)</strong>: JSON export available</li>
+        <li><strong>Erasure (Art. 17)</strong>: "Delete my account"</li>
         <li><strong>Restriction (Art. 18)</strong>: contact us by email</li>
-        <li><strong>Object (Art. 21)</strong>: object to processing based on legitimate interest
-          (moderation, Sentry) by contacting us by email</li>
-        <li><strong>Withdraw consent</strong>: advertising via ATT prompt (iOS);
-          HealthKit via iOS Settings</li>
-        <li>
-          <strong>Complaint</strong>:
-          <a href="https://www.cnil.fr/fr/plaintes" target="_blank">CNIL (French DPA)</a>
-          as lead supervisory authority for EU residents.
-          UK residents: <a href="https://ico.org.uk/make-a-complaint/" target="_blank">ICO</a>.
-          Residents outside the EU/UK may have rights under local privacy laws — contact us
-          at powerquest.app@gmail.com for any privacy request.
-        </li>
+        <li><strong>Object (Art. 21)</strong>: object to processing based on legitimate interest (moderation, Sentry)</li>
+        <li><strong>Withdraw consent</strong>: advertising via ATT prompt (iOS) or "Manage ad choices" (web); HealthKit via iOS Settings</li>
+        <li><strong>Complaint</strong>: <a href="https://www.cnil.fr/fr/plaintes" target="_blank">CNIL (French DPA)</a>. UK residents: <a href="https://ico.org.uk/make-a-complaint/" target="_blank">ICO</a>.</li>
       </ul>
     </section>
 
     <section>
-      <h2>8. Security</h2>
+      <h2>9. Security</h2>
       <p>
-        Data is encrypted in transit (TLS 1.3) and at rest (encrypted Postgres via Supabase),
-        with Row-Level Security (RLS). Authentication via Sign in with Apple only — no password
-        stored. In case of a data breach, the CNIL will be notified within 72 hours (Art. 33 GDPR)
-        and you will be informed if necessary (Art. 34).
+        Data is encrypted in transit (TLS) and at rest (encrypted Postgres via Supabase), with
+        Row-Level Security: you access only your own data (and, for a coach, that of athletes who
+        joined them). Your raw health data (Apple Health) and <strong>GPS coordinates</strong> stay
+        on your iOS device and are <strong>never sent to our servers</strong>. In case of a data
+        breach, the CNIL will be notified within 72 hours (Art. 33 GDPR) and you will be informed if
+        necessary (Art. 34).
       </p>
     </section>
 
     <section>
-      <h2>9. Age</h2>
+      <h2>10. Age</h2>
       <p>
-        PowerQuest is intended for users aged <strong>15 or older</strong>. An age check is
-        performed at sign-up. If your local legislation requires a higher minimum age or parental
-        consent, that requirement applies. If in doubt, ask your legal guardian before signing up.
+        PowerQuest is intended for users aged <strong>15 or older</strong> (Art. 7-1 French Data
+        Protection Act). An age check is performed at sign-up. If your local legislation requires a
+        higher minimum age or parental consent, that requirement applies.
       </p>
     </section>
 
     <section>
-      <h2>10. Changes</h2>
+      <h2>11. Health Disclaimer</h2>
+      <p>
+        PowerQuest <strong>is not a medical device</strong>. The information provided does not
+        replace medical advice. Consult a healthcare professional before any fitness program,
+        especially if you have a relevant medical history.
+      </p>
+    </section>
+
+    <section>
+      <h2>12. Changes</h2>
       <p>
         This policy may be updated. Significant changes will be notified inside the app
-        <strong>at least 30 days before they take effect</strong>. If you do not accept the new
-        terms, you may delete your account free of charge before they come into force.
+        <strong>at least 30 days before they take effect</strong>.
       </p>
     </section>
 
@@ -508,7 +614,9 @@
       SIRET: 10031200800012<br>
       Address: 5 rue Aimée Antignac, 35000 Rennes<br>
       Contact: <a href="mailto:powerquest.app@gmail.com">powerquest.app@gmail.com</a><br><br>
-      See also: <a href="https://fabduv.github.io/powerquest-legal/terms/">Terms of Use</a>
+      See also:
+      <a href="/terms/">Terms of Use</a> ·
+      <a href="/cookies/">Cookie Policy</a>
     </div>
   </div>
 

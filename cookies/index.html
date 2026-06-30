@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cookie Policy / Politique cookies — PowerQuest</title>
+  <style>
+    :root {
+      --accent: #f97316;
+      --bg: #0f0f11;
+      --border: #2a2a32;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      padding: 0 16px;
+    }
+    .container { max-width: 720px; margin: 0 auto; padding: 48px 0 80px; }
+    .back { display: inline-block; color: var(--muted); text-decoration: none; font-size: 14px; margin-bottom: 24px; }
+    .back:hover { color: var(--text); }
+    h1 { font-size: 28px; font-weight: 700; line-height: 1.2; }
+    .date { font-size: 13px; color: var(--muted); margin: 8px 0 40px; }
+    .lang-switch { display: flex; gap: 8px; margin-bottom: 32px; }
+    .lang-btn {
+      padding: 6px 16px; border-radius: 20px; font-size: 13px; font-weight: 600;
+      cursor: pointer; border: 1px solid var(--border); background: transparent; color: var(--muted);
+    }
+    .lang-btn.active { background: var(--accent); color: #fff; border-color: var(--accent); }
+    section { margin-bottom: 32px; }
+    h2 { font-size: 18px; font-weight: 600; margin-bottom: 10px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+    p { margin-bottom: 10px; }
+    ul { padding-left: 20px; margin-bottom: 10px; }
+    li { margin-bottom: 6px; }
+    a { color: var(--accent); text-decoration: underline; }
+    strong { font-weight: 600; }
+    em { font-style: italic; }
+    code { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 0.9em; }
+    table { width: 100%; border-collapse: collapse; margin: 10px 0; font-size: 14px; }
+    th, td { text-align: left; padding: 8px 10px; border: 1px solid var(--border); vertical-align: top; }
+    th { color: var(--muted); font-weight: 600; }
+    .footer-sig {
+      margin-top: 56px; padding-top: 24px; border-top: 1px solid var(--border);
+      font-size: 13px; color: var(--muted); line-height: 1.9;
+    }
+    .footer-sig a { color: var(--muted); }
+    .footer-sig a:hover { color: var(--text); }
+
+    [data-lang] { display: block; }
+    body.en [data-lang="fr"] { display: none; }
+    body.fr [data-lang="en"] { display: none; }
+  </style>
+</head>
+<body class="fr">
+<div class="container">
+
+  <a class="back" href="/">← PowerQuest</a>
+
+  <div class="lang-switch">
+    <button class="lang-btn active" onclick="setLang('fr')" id="btn-fr">Français</button>
+    <button class="lang-btn" onclick="setLang('en')" id="btn-en">English</button>
+  </div>
+
+  <!-- ===================== FRENCH ===================== -->
+  <div data-lang="fr">
+    <h1>Politique cookies et stockage local</h1>
+    <p class="date">Dernière mise à jour : 30 juin 2026</p>
+
+    <p>
+      Cette page décrit les traceurs utilisés par l'<strong>application web</strong> PowerQuest.
+      L'application iOS n'utilise pas de cookies web ; sa gestion publicitaire passe par le cadre
+      de transparence d'Apple (ATT) et Google AdMob.
+    </p>
+
+    <section>
+      <h2>1. Stockage strictement nécessaire (sans consentement)</h2>
+      <p>
+        Exempté de consentement (art. 82 loi Informatique et Libertés / directive ePrivacy) car
+        indispensable au service :
+      </p>
+      <table>
+        <tr><th>Élément</th><th>Type</th><th>Finalité</th><th>Durée</th></tr>
+        <tr><td>Session Supabase</td><td>Stockage local / cookie</td><td>Te garder connecté</td><td>Durée de session</td></tr>
+        <tr><td><code>pq_ad_consent</code></td><td>Stockage local</td><td>Mémoriser ton choix publicitaire</td><td>Jusqu'au retrait</td></tr>
+        <tr><td><code>pq_legalConsentAt</code></td><td>Stockage local</td><td>Preuve du consentement légal (âge, santé)</td><td>Jusqu'à suppression du compte</td></tr>
+        <tr><td><code>pq_onboardingDone</code></td><td>Stockage local</td><td>Ne pas réafficher l'écran de bienvenue</td><td>Persistant</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>2. Cookies publicitaires (soumis à consentement)</h2>
+      <p>Déposés <strong>uniquement après acceptation</strong> via le bandeau :</p>
+      <table>
+        <tr><th>Fournisseur</th><th>Finalité</th><th>En savoir plus</th></tr>
+        <tr><td><strong>Google AdSense</strong></td><td>Affichage et mesure de publicités</td><td><a href="https://policies.google.com/technologies/partner-sites" target="_blank">policies.google.com</a></td></tr>
+      </table>
+      <ul>
+        <li><strong>Avant tout choix</strong> : aucun script publicitaire ni cookie de ciblage n'est chargé.</li>
+        <li><strong>Si tu acceptes</strong> : des annonces personnalisées peuvent être affichées.</li>
+        <li><strong>Si tu refuses</strong> : des annonces <strong>non personnalisées</strong> peuvent être affichées, <strong>sans cookie de ciblage</strong> (paramètre <code>npa=1</code>).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Gérer ou retirer ton consentement</h2>
+      <p>
+        Tu peux <strong>revenir sur ton choix à tout moment</strong> :
+        <strong>Profil → « Gérer mes choix publicitaires »</strong> → le bandeau réapparaît et te
+        permet de modifier ta décision (le consentement est aussi facile à retirer qu'à donner,
+        conformément à l'art. 7.3 du RGPD).
+      </p>
+    </section>
+
+    <section>
+      <h2>4. Contact</h2>
+      <p><a href="mailto:powerquest.app@gmail.com">powerquest.app@gmail.com</a></p>
+    </section>
+
+    <div class="footer-sig">
+      <strong>PowerQuest</strong><br>
+      Édité par Fabien Duvacher — auto-entrepreneur (France)<br>
+      Contact : <a href="mailto:powerquest.app@gmail.com">powerquest.app@gmail.com</a><br><br>
+      Voir aussi :
+      <a href="/privacy/">Politique de confidentialité</a> ·
+      <a href="/terms/">Conditions d'utilisation</a>
+    </div>
+  </div>
+
+  <!-- ===================== ENGLISH ===================== -->
+  <div data-lang="en">
+    <h1>Cookie & Local Storage Policy</h1>
+    <p class="date">Last updated: June 30, 2026</p>
+
+    <p>
+      This page describes the trackers used by the PowerQuest <strong>web app</strong>. The iOS app
+      does not use web cookies; its advertising is governed by Apple's transparency framework (ATT)
+      and Google AdMob.
+    </p>
+
+    <section>
+      <h2>1. Strictly necessary storage (no consent required)</h2>
+      <p>
+        Exempt from consent (Art. 82 French Data Protection Act / ePrivacy Directive) as it is
+        essential to the service:
+      </p>
+      <table>
+        <tr><th>Item</th><th>Type</th><th>Purpose</th><th>Duration</th></tr>
+        <tr><td>Supabase session</td><td>Local storage / cookie</td><td>Keep you signed in</td><td>Session</td></tr>
+        <tr><td><code>pq_ad_consent</code></td><td>Local storage</td><td>Remember your ad choice</td><td>Until withdrawn</td></tr>
+        <tr><td><code>pq_legalConsentAt</code></td><td>Local storage</td><td>Proof of legal consent (age, health)</td><td>Until account deletion</td></tr>
+        <tr><td><code>pq_onboardingDone</code></td><td>Local storage</td><td>Avoid re-showing the welcome screen</td><td>Persistent</td></tr>
+      </table>
+    </section>
+
+    <section>
+      <h2>2. Advertising cookies (consent required)</h2>
+      <p>Set <strong>only after acceptance</strong> via the banner:</p>
+      <table>
+        <tr><th>Provider</th><th>Purpose</th><th>Learn more</th></tr>
+        <tr><td><strong>Google AdSense</strong></td><td>Serving and measuring ads</td><td><a href="https://policies.google.com/technologies/partner-sites" target="_blank">policies.google.com</a></td></tr>
+      </table>
+      <ul>
+        <li><strong>Before any choice</strong>: no advertising script or targeting cookie is loaded.</li>
+        <li><strong>If you accept</strong>: personalised ads may be shown.</li>
+        <li><strong>If you decline</strong>: <strong>non-personalised</strong> ads may be shown, <strong>without a targeting cookie</strong> (<code>npa=1</code> parameter).</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>3. Manage or withdraw your consent</h2>
+      <p>
+        You can <strong>change your choice at any time</strong>:
+        <strong>Profile → "Manage ad choices"</strong> → the banner reappears and lets you change
+        your decision (consent is as easy to withdraw as to give, per Art. 7.3 GDPR).
+      </p>
+    </section>
+
+    <section>
+      <h2>4. Contact</h2>
+      <p><a href="mailto:powerquest.app@gmail.com">powerquest.app@gmail.com</a></p>
+    </section>
+
+    <div class="footer-sig">
+      <strong>PowerQuest</strong><br>
+      Published by Fabien Duvacher — sole trader (France)<br>
+      Contact: <a href="mailto:powerquest.app@gmail.com">powerquest.app@gmail.com</a><br><br>
+      See also:
+      <a href="/privacy/">Privacy Policy</a> ·
+      <a href="/terms/">Terms of Use</a>
+    </div>
+  </div>
+
+</div>
+<script>
+  function setLang(lang) {
+    document.body.className = lang;
+    document.getElementById('btn-fr').classList.toggle('active', lang === 'fr');
+    document.getElementById('btn-en').classList.toggle('active', lang === 'en');
+    document.documentElement.lang = lang;
+  }
+  const browserLang = (navigator.language || 'fr').startsWith('fr') ? 'fr' : 'en';
+  setLang(browserLang);
+</script>
+</body>
+</html>
