@@ -70,7 +70,7 @@
   <!-- ===================== FRENCH ===================== -->
   <div data-lang="fr">
     <h1>Politique de confidentialité</h1>
-    <p class="date">Dernière mise à jour : 9 octobre 2026 · Version 2.2 (iOS + Web)</p>
+    <p class="date">Dernière mise à jour : 13 octobre 2026 · Version 2.4 (iOS + Web)</p>
 
     <p>
       PowerQuest (« l'Application », « le Service ») est une application de suivi
@@ -109,14 +109,21 @@
         </li>
         <li>
           <strong>Activité sportive</strong> : programmes, plannings, séances complétées, exercices
-          personnalisés, séries/reps/poids, notes RPE.
+          personnalisés, séries/reps/poids, notes RPE, et les mesures de vos séances : distance,
+          durée, allure, vitesse, dénivelé et altitude.
         </li>
         <li>
-          <strong>Santé / activité</strong> (Art. 9 RGPD, si vous autorisez HealthKit sur iOS) :
-          fréquence cardiaque, calories actives, distance, durée, pas, allure. Ces données sont lues
-          via HealthKit et les métriques dérivées sont envoyées à nos serveurs (Supabase, France/UE)
-          lors de la validation ou de l'import d'une séance, afin d'afficher votre activité et votre
-          progression. <strong>Les données de santé ne sont jamais utilisées à des fins
+          <strong>Santé</strong> (Art. 9 RGPD, uniquement avec votre consentement explicite) :
+          fréquence cardiaque (moyenne <strong>et courbe dans le temps</strong>), calories actives
+          et pas — lues dans Apple Santé (iOS, dont l'Apple Watch), mesurées par l'app PowerQuest
+          sur votre montre, importées de Strava ou saisies par vous ; elles sont envoyées à nos serveurs
+          (Supabase, France/UE) lors de la validation ou de l'import d'une séance, afin d'afficher
+          votre activité et votre progression. Ce consentement est <strong>facultatif</strong> : il
+          vous est proposé à l'inscription, puis demandé au moment où une donnée de santé entrerait
+          dans l'application (autorisation Apple Santé, envoi d'une séance à une montre, connexion
+          d'une montre ou de Strava, saisie d'une fréquence cardiaque ou de calories). Sans lui,
+          l'application reste utilisable : vos séances sont enregistrées, sans fréquence cardiaque
+          ni calories. <strong>Les données de santé ne sont jamais utilisées à des fins
           publicitaires, ni partagées avec des tiers à des fins de profilage ou de monétisation.</strong>
           Si vous choisissez de <strong>publier une séance</strong> dans le feed social, certaines
           statistiques que vous sélectionnez (durée, distance, calories) peuvent devenir visibles par
@@ -124,20 +131,39 @@
           reste visible uniquement par vous (et, le cas échéant, votre coach).
         </li>
         <li>
-          <strong>Poids corporel</strong> (facultatif, donnée de santé — art. 9 RGPD) : uniquement si
-          vous le renseignez dans <em>Profil → Entraînement → Mon poids</em>, avec votre consentement
-          explicite, pour <strong>estimer les calories</strong> de vos séances. Il est
-          <strong>conservé sur votre appareil uniquement</strong> (iPhone, ou navigateur pour le web)
-          et <strong>n'est jamais transmis à nos serveurs</strong>, ni à votre coach, ni à vos amis.
-          Seul le <strong>total de calories estimé</strong> de chaque séance est enregistré avec
-          elle ; il n'est pas montré à vos amis.
+          <strong>Poids corporel</strong> (facultatif, donnée de santé — art. 9 RGPD). Deux usages
+          distincts, chacun avec son propre consentement explicite, dans
+          <em>Profil → Entraînement → Mon poids</em> :
+          <ul>
+            <li>
+              <em>Estimation des calories</em> : si vous indiquez votre poids pour estimer les
+              calories de vos séances, il est <strong>conservé sur votre appareil uniquement</strong>
+              (iPhone, ou navigateur pour le web) et n'est pas transmis à nos serveurs. Seul le
+              <strong>total de calories estimé</strong> de chaque séance est enregistré avec elle ;
+              il n'est pas montré à vos amis.
+            </li>
+            <li>
+              <em>Suivi du poids</em> (réservé aux personnes de <strong>18 ans et plus</strong>) : si
+              vous activez « Suivre mon poids dans le temps », vos pesées (jour et poids) sont
+              enregistrées sur votre compte pour afficher leur courbe sur l'iPhone et le web et
+              calculer votre force rapportée à votre poids (visible par vous seul). Nous enregistrons
+              aussi la date de votre accord et la version de la présente politique. Si vous le
+              choisissez, <strong>coach par coach</strong>, votre coach voit votre courbe :
+              <strong>il voit alors toutes vos pesées, y compris celles antérieures au
+              partage</strong>, et plus aucune dès que vous arrêtez le partage ou que le suivi
+              coach prend fin.
+            </li>
+          </ul>
+          Votre poids n'est jamais public : il n'apparaît ni dans le fil, ni sur votre profil, ni
+          dans les classements, et n'est jamais montré à vos amis.
         </li>
         <li>
           <strong>Localisation (GPS)</strong> : pendant une séance course/vélo que vous lancez, le GPS
-          de l'appareil sert à calculer <strong>distance, allure et vitesse</strong>. La position est
-          traitée <strong>uniquement sur votre appareil</strong> : <strong>aucune coordonnée ni tracé
-          n'est stocké ni transmis</strong> — seule la distance agrégée (un nombre) est enregistrée
-          avec votre séance.
+          de l'appareil (et son baromètre) sert à calculer <strong>distance, allure, vitesse et
+          dénivelé</strong>. La position est traitée <strong>uniquement sur votre appareil</strong> :
+          <strong>aucune coordonnée ni tracé cartographique n'est stocké ni transmis</strong> —
+          seules des mesures dérivées (distance, vitesse, altitude au fil du temps, dénivelé) sont
+          enregistrées avec votre séance pour en tracer les graphes.
         </li>
         <li>
           <strong>Social</strong> (si profil public activé) : posts d'activité, commentaires,
@@ -166,6 +192,29 @@
           vous envoyez une séance ou un plan vers votre montre Garmin, les données transitent par
           l'application <strong>Garmin Connect Mobile</strong> installée sur votre appareil. Les
           résultats peuvent être réimportés dans PowerQuest.
+        </li>
+        <li>
+          <strong>Import Strava</strong> (si vous connectez votre compte Strava dans
+          <em>Montres connectées</em>) : nous importons vos activités, <strong>y compris
+          privées</strong>, dès la connexion (les 30 derniers jours) puis au fil de l'eau — sport,
+          date, nom de l'activité, durée, distance, calories, fréquence cardiaque moyenne et
+          dénivelé positif, avec leur identifiant Strava — ainsi que votre identifiant d'athlète
+          Strava et les jetons d'autorisation, conservés <strong>sur nos serveurs
+          uniquement</strong> (jamais sur votre appareil). Strava nous envoie aussi d'autres
+          informations (dont le tracé GPS) : nous ne les conservons pas. Conformément aux règles de
+          Strava, ces activités ne sont visibles <strong>que par vous</strong> : ni vos amis, ni
+          les classements ; votre coach voit seulement « séance faite », avec le sport, la date et
+          l'heure, et peut en être notifié. Si la même sortie vous parvient aussi par Apple Santé,
+          c'est la version Apple Santé qui est conservée, et votre coach peut alors en voir le
+          détail. Une activité supprimée sur Strava est supprimée chez nous.
+        </li>
+        <li>
+          <strong>Abonnement</strong> (si vous souscrivez à la suppression des publicités) : statut
+          d'abonnement (offre, formule, échéance) et identifiants de transaction.
+          <strong>Aucune donnée de carte bancaire</strong> n'est collectée ni stockée par
+          PowerQuest : le paiement est traité exclusivement par Apple (App Store). Si un canal
+          d'achat web est ouvert, le prestataire de paiement retenu sera ajouté à cette politique
+          avant son ouverture.
         </li>
         <li>
           <strong>Notifications</strong> : un token de notification push (Apple APNs) et un
@@ -198,6 +247,10 @@
         <li>Fournir le service (synchronisation, historique, récapitulatif de séance)</li>
         <li>Mesurer distance, allure et vitesse d'une séance course/vélo via le GPS (traitement local)</li>
         <li>Synchroniser vos séances/plans avec une montre Garmin (si vous la connectez)</li>
+        <li>Importer vos activités Strava (si vous connectez votre compte)</li>
+        <li>Afficher l'évolution de votre poids et votre force relative et, si vous le choisissez,
+          montrer votre courbe à votre coach (suivi du poids, facultatif)</li>
+        <li>Gérer votre abonnement « suppression des publicités »</li>
         <li>Permettre le mode coach/athlète (attribution de séances, suivi, messagerie)</li>
         <li>Modérer le contenu communautaire et prévenir les abus</li>
         <li>Envoyer des notifications push (séances assignées par un coach, activité sociale)</li>
@@ -221,11 +274,25 @@
           moment), coaching.
         </li>
         <li>
-          <strong>Données de santé HealthKit (Art. 9(2)(a))</strong> : consentement explicite
-          accordé lors de l'inscription via une case à cocher dédiée dans l'app, en plus du
-          prompt iOS HealthKit (accès technique, distinct du consentement RGPD).
-          Vous pouvez retirer ce consentement via <em>Réglages iOS → Santé → Accès → PowerQuest</em> ;
-          pour supprimer les données déjà synchronisées, utilisez « Supprimer mon compte ».
+          <strong>Données de santé (Art. 9(2)(a))</strong> : consentement explicite, facultatif,
+          recueilli par une case dédiée (à l'inscription, ou au moment où une donnée de santé
+          entrerait dans l'application), en plus du prompt iOS HealthKit (accès technique,
+          distinct du consentement RGPD). Vous le retirez dans l'app : <em>Retirer mon accord santé</em>, dans le profil (iOS : <em>Réglages → Confidentialité</em> ; web : <em>Modifier le profil</em>) (voir §8).
+        </li>
+        <li>
+          <strong>Poids corporel (Art. 9(2)(a))</strong> : consentement explicite par une case
+          dédiée, distincte de vos autres choix, pour chacun des deux usages (calories, suivi du
+          poids). Le partage avec un coach demande un second accord, coach par coach. Chaque accord
+          se retire à tout moment, aussi simplement qu'il a été donné.
+        </li>
+        <li>
+          <strong>Import Strava (Art. 6(1)(a) et 9(2)(a))</strong> : consentement exprimé en
+          connectant votre compte Strava, précédé de votre consentement explicite aux données de
+          santé (case dédiée) ; vous le retirez en déconnectant Strava.
+        </li>
+        <li>
+          <strong>Abonnement</strong> : exécution du contrat (Art. 6(1)(b)) ; conservation des pièces
+          comptables : obligation légale (Art. 6(1)(c)).
         </li>
         <li>
           <strong>Intérêt légitime (Art. 6(1)(f))</strong> : modération du contenu,
@@ -239,15 +306,21 @@
       <ul>
         <li><strong>Supabase</strong> (infrastructure Amazon Web Services, région <strong>France / UE — Paris</strong>) — base de données, authentification, stockage</li>
         <li><strong>Vercel</strong> (US — Clauses Contractuelles Types) — hébergement de l'application web et de ces pages</li>
-        <li><strong>Apple</strong> — Sign in with Apple, HealthKit (lecture locale), APNs (push), App Store</li>
+        <li><strong>Apple</strong> — Sign in with Apple, HealthKit (lecture locale), APNs (push), App Store et achats intégrés (abonnement — Apple agit en vendeur et encaisse le paiement)</li>
         <li><strong>Google</strong> (Google Ireland Ltd / Google LLC) — connexion Google (web), publicité AdSense (web) / AdMob (iOS), gestion du consentement</li>
         <li><strong>Garmin</strong> (Garmin Ltd) — envoi de séances/plans vers votre montre et import des résultats, via l'app Garmin Connect Mobile installée sur votre appareil</li>
+        <li><strong>Strava</strong> (Strava, Inc., États-Unis) — si vous connectez votre compte : nous lui transmettons uniquement ce qu'exige la connexion (jetons d'autorisation, identifiant d'athlète) et en recevons vos activités. Strava traite vos données en tant que responsable de traitement distinct, selon sa propre politique de confidentialité.</li>
         <li><strong>Sentry</strong> (iOS) — rapports d'erreurs et de performance, <strong>rattachés à votre identifiant de compte</strong> pour le diagnostic</li>
       </ul>
       <p class="notice">
         Les <strong>données de localisation GPS</strong> utilisées pendant une séance sont traitées
         <strong>localement sur votre appareil</strong> et ne sont transmises à aucun de ces
-        prestataires ni à nos serveurs (seule la distance calculée est enregistrée avec la séance).
+        prestataires ni à nos serveurs (seules des mesures dérivées — distance, vitesse, altitude,
+        dénivelé — sont enregistrées avec la séance).
+      </p>
+      <p>
+        Votre <strong>coach</strong> n'est destinataire que de ce que décrit le §2 (séances,
+        récapitulatifs, messages et, si vous le partagez, votre suivi du poids).
       </p>
     </section>
 
@@ -264,6 +337,7 @@
         <li><strong>Apple</strong> (Sign in with Apple, APNs) ;</li>
         <li><strong>Vercel</strong> (États-Unis) — diffusion de l'app web et journaux techniques ;</li>
         <li><strong>Garmin</strong> — la transmission de séances vers votre montre transite par l'app Garmin Connect Mobile ; Garmin peut traiter ces données hors UE selon ses propres conditions ;</li>
+        <li><strong>Strava</strong> (États-Unis) — si vous connectez votre compte, vos activités (dont fréquence cardiaque et calories) nous viennent de ses serveurs aux États-Unis ; Strava les traite sous sa propre responsabilité ;</li>
         <li><strong>Sentry</strong> — supervision des erreurs, hébergement susceptible d'être aux États-Unis.</li>
       </ul>
       <p>
@@ -285,7 +359,10 @@
         <li><strong>Données de modération</strong> : conservées 1 an après résolution du signalement.</li>
         <li><strong>Journaux techniques (Sentry, logs de connexion)</strong> : 12 mois maximum.</li>
         <li><strong>Consentement publicitaire</strong> : conservé jusqu'à son retrait.</li>
-        <li><strong>Poids corporel</strong> : conservé sur votre appareil uniquement, jusqu'à ce que vous le retiriez (ou désinstalliez l'application / effaciez les données du navigateur).</li>
+        <li><strong>Poids pour les calories</strong> : conservé sur votre appareil uniquement, jusqu'à ce que vous le retiriez (ou désinstalliez l'application / effaciez les données du navigateur).</li>
+        <li><strong>Pesées du suivi du poids</strong> : conservées tant que le suivi est actif. Arrêter le suivi efface <strong>immédiatement et définitivement</strong> toutes vos pesées et tous vos partages ; vous pouvez aussi supprimer une pesée à l'unité.</li>
+        <li><strong>Strava</strong> : jetons d'autorisation supprimés dès que vous déconnectez votre compte, et les activités venues de Strava sont alors retirées, comme Strava l'exige. Vous pouvez aussi retirer PowerQuest des applications autorisées dans les réglages de Strava.</li>
+        <li><strong>Abonnement</strong> : statut conservé pendant la durée du compte ; pièces comptables liées aux paiements conservées 10 ans (art. L123-22 du Code de commerce).</li>
       </ul>
       <p>
         Suppression à la demande : <em>Profil → Modifier le profil → Supprimer mon compte</em>.
@@ -298,12 +375,12 @@
       <h2>8. Vos droits (RGPD)</h2>
       <p>Délai de réponse : 1 mois maximum.</p>
       <ul>
-        <li><strong>Accès (Art. 15)</strong> et <strong>portabilité (Art. 20)</strong> : « Exporter mes données » (JSON) dans l'app</li>
+        <li><strong>Accès (Art. 15)</strong> et <strong>portabilité (Art. 20)</strong> : « Exporter mes données » (JSON) dans l'app — l'export inclut vos pesées, votre accord et vos partages de poids</li>
         <li><strong>Rectification (Art. 16)</strong> : modifier votre profil dans l'app</li>
         <li><strong>Effacement (Art. 17)</strong> : « Supprimer mon compte »</li>
         <li><strong>Limitation (Art. 18)</strong> : nous contacter par e-mail</li>
         <li><strong>Opposition (Art. 21)</strong> : vous opposer aux traitements fondés sur l'intérêt légitime (modération, Sentry)</li>
-        <li><strong>Retrait du consentement</strong> : publicité via prompt ATT (iOS) ou « Gérer mes choix publicitaires » (web) ; HealthKit via Réglages iOS ; poids via <em>Mon poids → Retirer mon poids</em></li>
+        <li><strong>Retrait du consentement</strong> : publicité via prompt ATT (iOS) ou « Gérer mes choix publicitaires » (web) ; données de santé : <em>Retirer mon accord santé</em>, dans le profil (iOS : <em>Réglages → Confidentialité</em> ; web : <em>Modifier le profil</em>) (l'import s'arrête, vos montres et Strava sont déconnectés ; vous pouvez aussi effacer la fréquence cardiaque et les calories déjà enregistrées, vos séances restent) ; poids des calories : <em>Mon poids → Retirer mon poids</em> ; suivi du poids : <em>Mon poids → Arrêter le suivi et effacer mes pesées</em> ; partage avec un coach : interrupteur du coach concerné, dans <em>Mon poids</em> ; Strava : <em>Montres connectées → Déconnecter</em></li>
         <li><strong>Réclamation</strong> : <a href="https://www.cnil.fr/fr/plaintes" target="_blank">CNIL</a></li>
       </ul>
     </section>
@@ -314,8 +391,9 @@
         Données chiffrées en transit (TLS) et au repos (Postgres chiffré via Supabase), avec
         contrôle d'accès par Row-Level Security : vous n'accédez qu'à vos propres données (et, pour
         un coach, à celles de ses athlètes l'ayant rejoint). Vos données de santé brutes (Apple Santé)
-        et les <strong>coordonnées GPS</strong> restent sur votre appareil iOS et ne sont
-        <strong>jamais envoyées à nos serveurs</strong>. En cas de violation de données, la CNIL sera
+        et les <strong>coordonnées GPS</strong> restent sur votre appareil et ne sont
+        <strong>jamais envoyées à nos serveurs</strong> (seules les métriques dérivées décrites au
+        §2 le sont). En cas de violation de données, la CNIL sera
         notifiée sous 72h (Art. 33 RGPD) et vous serez informé si nécessaire (Art. 34).
       </p>
     </section>
@@ -324,9 +402,10 @@
       <h2>10. Mineurs</h2>
       <p>
         PowerQuest est réservé aux personnes d'au moins <strong>15 ans</strong> en France
-        (Art. 7-1 Loi Informatique et Libertés). Une confirmation d'âge est demandée à l'inscription.
+        (art. 45 de la loi n° 78-17 du 6 janvier 1978). Une confirmation d'âge est demandée à l'inscription.
         Si votre législation locale impose un âge ou un consentement parental différent, ce seuil
-        s'applique.
+        s'applique. Le <strong>suivi du poids</strong> est réservé aux personnes de
+        <strong>18 ans et plus</strong> (confirmation demandée à son activation).
       </p>
     </section>
 
@@ -362,7 +441,7 @@
   <!-- ===================== ENGLISH ===================== -->
   <div data-lang="en">
     <h1>Privacy Policy</h1>
-    <p class="date">Last updated: October 9, 2026 · Version 2.2 (iOS + Web)</p>
+    <p class="date">Last updated: October 13, 2026 · Version 2.4 (iOS + Web)</p>
 
     <p>
       PowerQuest ("the App", "the Service") is a training-tracking application available on
@@ -398,13 +477,20 @@
         </li>
         <li>
           <strong>Training activity</strong>: programs, schedules, completed sessions, custom
-          exercises, sets/reps/weight, RPE notes.
+          exercises, sets/reps/weight, RPE notes, and your session measurements: distance, duration,
+          pace, speed, elevation and altitude.
         </li>
         <li>
-          <strong>Health / activity</strong> (Art. 9 GDPR, if you grant HealthKit access on iOS):
-          heart rate, active calories, distance, duration, steps, pace. This data is read via
-          HealthKit and the derived metrics are sent to our servers (Supabase, France/EU) when you
-          confirm or import a session, to display your activity and progress.
+          <strong>Health</strong> (Art. 9 GDPR, only with your explicit consent): heart rate (average
+          <strong>and curve over time</strong>), active calories and steps — read from Apple Health
+          (iOS, including Apple Watch), measured by the PowerQuest app on your watch, imported from
+          Strava or entered by you; they are sent to
+          our servers (Supabase, France/EU) when you confirm or import a session, to display your
+          activity and progress. This consent is <strong>optional</strong>: it is offered at sign-up,
+          then asked when health data would enter the app (Apple Health authorisation, sending a
+          session to a watch, connecting a watch or Strava, entering a heart rate or calories).
+          Without it, the app remains usable: your sessions are saved, without heart rate or
+          calories.
           <strong>Health data is never used for advertising, nor shared with third parties for
           profiling or monetisation.</strong> If you choose to <strong>share a workout</strong> in
           the social feed, certain stats you select (duration, distance, calories) may become visible
@@ -412,18 +498,34 @@
           to you (and, where applicable, your coach).
         </li>
         <li>
-          <strong>Body weight</strong> (optional, health data — GDPR art. 9): only if you enter it in
-          <em>Profile → Training → My weight</em>, with your explicit consent, to <strong>estimate the
-          calories</strong> of your workouts. It is <strong>kept on your device only</strong> (iPhone, or
-          browser on the web) and is <strong>never sent to our servers</strong>, your coach or your
-          friends. Only each workout's <strong>estimated calorie total</strong> is saved with it; it is
-          not shown to your friends.
+          <strong>Body weight</strong> (optional, health data — GDPR art. 9). Two separate uses, each
+          with its own explicit consent, in <em>Profile → Training → My weight</em>:
+          <ul>
+            <li>
+              <em>Calorie estimate</em>: if you enter your weight to estimate your workout calories,
+              it is <strong>kept on your device only</strong> (iPhone, or browser on the web) and is
+              not sent to our servers. Only each workout's <strong>estimated calorie total</strong> is
+              saved with it; it is not shown to your friends.
+            </li>
+            <li>
+              <em>Weight tracking</em> (<strong>18 and over</strong> only): if you turn on "Track my
+              weight over time", your weigh-ins (day and weight) are stored on your account to show
+              their curve on iPhone and web and compute your strength relative to your weight
+              (visible only to you). We also store the date of your consent and the version of this
+              policy. If you choose, <strong>coach by coach</strong>, your coach sees your curve:
+              <strong>they then see all your weigh-ins, including those made before sharing</strong>,
+              and none at all once you stop sharing or the coaching relationship ends.
+            </li>
+          </ul>
+          Your weight is never public: it never appears in the feed, on your profile or in
+          leaderboards, and is never shown to your friends.
         </li>
         <li>
           <strong>Location (GPS)</strong>: during a run/cycling session you start, the device GPS is
-          used to compute <strong>distance, pace and speed</strong>. Location is processed
-          <strong>on your device only</strong>: <strong>no coordinate or track is stored or
-          transmitted</strong> — only the aggregate distance (a number) is saved with your session.
+          (and its barometer) is used to compute <strong>distance, pace, speed and elevation</strong>.
+          Location is processed <strong>on your device only</strong>: <strong>no coordinate or map
+          track is stored or transmitted</strong> — only derived measurements (distance, speed,
+          altitude over time, elevation gain) are saved with your session to draw its charts.
         </li>
         <li>
           <strong>Social</strong> (if public profile enabled): activity posts, comments, likes,
@@ -450,6 +552,26 @@
           <strong>Garmin watch sync</strong> (if you connect a watch): when you send a session or
           plan to your Garmin watch, the data transits through the <strong>Garmin Connect Mobile</strong>
           app installed on your device. Results may be imported back into PowerQuest.
+        </li>
+        <li>
+          <strong>Strava import</strong> (if you connect your Strava account in <em>Connected
+          watches</em>): we import your activities, <strong>including private ones</strong>, as soon
+          as you connect (the last 30 days) and then as they come — sport, date, activity name,
+          duration, distance, calories, average heart rate and elevation gain, with their Strava ID —
+          along with your Strava athlete ID and authorisation tokens, kept <strong>on our servers
+          only</strong> (never on your device). Strava also sends us other information (including
+          the GPS track): we do not keep it. Under Strava's rules, these activities are visible
+          <strong>to you only</strong>: not to your friends, not in leaderboards; your coach only
+          sees "session done", with the sport, date and time, and may be notified. If the same
+          activity also arrives through Apple Health, the Apple Health version is kept and your
+          coach can then see its details. An activity deleted on Strava is deleted on our side.
+        </li>
+        <li>
+          <strong>Subscription</strong> (if you subscribe to remove ads): subscription status (offer,
+          plan, expiry date) and transaction identifiers. <strong>No payment card data</strong> is
+          collected or stored by PowerQuest: payment is handled exclusively by Apple (App Store). If a
+          web purchase channel opens, the chosen payment provider will be added to this policy before
+          it opens.
         </li>
         <li>
           <strong>Notifications</strong>: a push notification token (Apple APNs) and a device
@@ -479,6 +601,10 @@
         <li>Provide the service (sync, history, session recap)</li>
         <li>Measure distance, pace and speed of a run/cycling session via GPS (local processing)</li>
         <li>Sync your sessions/plans with a Garmin watch (if you connect it)</li>
+        <li>Import your Strava activities (if you connect your account)</li>
+        <li>Show how your weight changes and your relative strength and, if you choose, show your
+          curve to your coach (optional weight tracking)</li>
+        <li>Manage your "remove ads" subscription</li>
         <li>Enable the coach/athlete mode (session assignment, tracking, messaging)</li>
         <li>Moderate community content and prevent abuse</li>
         <li>Send push notifications (coach-assigned sessions, social activity)</li>
@@ -502,11 +628,25 @@
           time), coaching.
         </li>
         <li>
-          <strong>Health data HealthKit (Art. 9(2)(a))</strong>: explicit consent collected at
-          sign-up via a dedicated checkbox in the app, in addition to the iOS HealthKit prompt
-          (technical access, distinct from GDPR consent). You may withdraw via
-          <em>iOS Settings → Health → Apps → PowerQuest</em>; to delete already synced data, use
-          "Delete my account".
+          <strong>Health data (Art. 9(2)(a))</strong>: optional explicit consent collected via a
+          dedicated checkbox (at sign-up, or when health data would enter the app), in addition to
+          the iOS HealthKit prompt (technical access, distinct from GDPR consent). You withdraw it
+          in the app: <em>Withdraw my health consent</em>, in your profile (iOS: <em>Settings → Privacy</em>; web: <em>Edit profile</em>) (see §8).
+        </li>
+        <li>
+          <strong>Body weight (Art. 9(2)(a))</strong>: explicit consent via a dedicated checkbox,
+          separate from your other choices, for each of the two uses (calories, weight tracking).
+          Sharing with a coach requires a second consent, coach by coach. Each consent can be
+          withdrawn at any time, as easily as it was given.
+        </li>
+        <li>
+          <strong>Strava import (Art. 6(1)(a) and 9(2)(a))</strong>: consent given by connecting your
+          Strava account, preceded by your explicit health-data consent (dedicated checkbox); you
+          withdraw it by disconnecting Strava.
+        </li>
+        <li>
+          <strong>Subscription</strong>: contract performance (Art. 6(1)(b)); retention of accounting
+          records: legal obligation (Art. 6(1)(c)).
         </li>
         <li>
           <strong>Legitimate interest (Art. 6(1)(f))</strong>: content moderation, account security,
@@ -520,15 +660,21 @@
       <ul>
         <li><strong>Supabase</strong> (Amazon Web Services infrastructure, <strong>France / EU — Paris</strong> region) — database, authentication, storage</li>
         <li><strong>Vercel</strong> (US — Standard Contractual Clauses) — hosting of the web app and these pages</li>
-        <li><strong>Apple</strong> — Sign in with Apple, HealthKit (local read), APNs (push), App Store</li>
+        <li><strong>Apple</strong> — Sign in with Apple, HealthKit (local read), APNs (push), App Store and in-app purchases (subscription — Apple acts as seller and collects payment)</li>
         <li><strong>Google</strong> (Google Ireland Ltd / Google LLC) — Google sign-in (web), AdSense (web) / AdMob (iOS) advertising, consent management</li>
         <li><strong>Garmin</strong> (Garmin Ltd) — sending sessions/plans to your watch and importing results, via the Garmin Connect Mobile app on your device</li>
+        <li><strong>Strava</strong> (Strava, Inc., United States) — if you connect your account: we only send it what the connection requires (authorisation tokens, athlete ID) and receive your activities from it. Strava processes your data as a separate controller, under its own privacy policy.</li>
         <li><strong>Sentry</strong> (iOS) — error and performance reports, <strong>linked to your account identifier</strong> for diagnostics</li>
       </ul>
       <p class="notice">
         The <strong>GPS location data</strong> used during a session is processed
         <strong>locally on your device</strong> and is transmitted to none of these processors nor
-        to our servers (only the computed distance is saved with the session).
+        to our servers (only derived measurements — distance, speed, altitude, elevation gain — are
+        saved with the session).
+      </p>
+      <p>
+        Your <strong>coach</strong> only receives what §2 describes (sessions, recaps, messages and,
+        if you share it, your weight tracking).
       </p>
     </section>
 
@@ -545,6 +691,7 @@
         <li><strong>Apple</strong> (Sign in with Apple, APNs);</li>
         <li><strong>Vercel</strong> (United States) — web app delivery and technical logs;</li>
         <li><strong>Garmin</strong> — sending sessions to your watch transits through the Garmin Connect Mobile app; Garmin may process this data outside the EU under its own terms;</li>
+        <li><strong>Strava</strong> (United States) — if you connect your account, your activities (including heart rate and calories) come to us from its servers in the United States; Strava processes them under its own responsibility;</li>
         <li><strong>Sentry</strong> — error monitoring, possibly hosted in the United States.</li>
       </ul>
       <p>
@@ -566,7 +713,10 @@
         <li><strong>Moderation data</strong>: retained for 1 year after the report is resolved.</li>
         <li><strong>Technical logs (Sentry, connection logs)</strong>: maximum 12 months.</li>
         <li><strong>Advertising consent</strong>: kept until withdrawn.</li>
-        <li><strong>Body weight</strong>: kept on your device only, until you remove it (or uninstall the app / clear your browser data).</li>
+        <li><strong>Weight for calories</strong>: kept on your device only, until you remove it (or uninstall the app / clear your browser data).</li>
+        <li><strong>Weight-tracking weigh-ins</strong>: kept while tracking is on. Stopping tracking <strong>immediately and permanently</strong> deletes all your weigh-ins and shares; you can also delete a single weigh-in.</li>
+        <li><strong>Strava</strong>: authorisation tokens deleted as soon as you disconnect your account, and activities that came from Strava are then removed, as Strava requires. You can also remove PowerQuest from the authorised apps in your Strava settings.</li>
+        <li><strong>Subscription</strong>: status kept for the life of the account; payment accounting records kept 10 years (art. L123-22 French Commercial Code).</li>
       </ul>
       <p>
         On-demand deletion: <em>Profile → Edit profile → Delete my account</em>. Deletion is
@@ -579,12 +729,12 @@
       <h2>8. Your Rights (GDPR)</h2>
       <p>Response time: maximum 1 month.</p>
       <ul>
-        <li><strong>Access (Art. 15)</strong> and <strong>portability (Art. 20)</strong>: "Export my data" (JSON) in the app</li>
+        <li><strong>Access (Art. 15)</strong> and <strong>portability (Art. 20)</strong>: "Export my data" (JSON) in the app — the export includes your weigh-ins, your consent and your weight shares</li>
         <li><strong>Rectification (Art. 16)</strong>: edit your profile in the app</li>
         <li><strong>Erasure (Art. 17)</strong>: "Delete my account"</li>
         <li><strong>Restriction (Art. 18)</strong>: contact us by email</li>
         <li><strong>Object (Art. 21)</strong>: object to processing based on legitimate interest (moderation, Sentry)</li>
-        <li><strong>Withdraw consent</strong>: advertising via ATT prompt (iOS) or "Manage ad choices" (web); HealthKit via iOS Settings; weight via <em>My weight → Remove my weight</em></li>
+        <li><strong>Withdraw consent</strong>: advertising via ATT prompt (iOS) or "Manage ad choices" (web); health data: <em>Withdraw my health consent</em>, in your profile (iOS: <em>Settings → Privacy</em>; web: <em>Edit profile</em>) (imports stop, your watches and Strava are disconnected; you can also delete the heart rate and calories already saved, your sessions stay); calorie weight: <em>My weight → Remove my weight</em>; weight tracking: <em>My weight → Stop tracking and delete my weigh-ins</em>; coach sharing: that coach's switch, in <em>My weight</em>; Strava: <em>Connected watches → Disconnect</em></li>
         <li><strong>Complaint</strong>: <a href="https://www.cnil.fr/fr/plaintes" target="_blank">CNIL (French DPA)</a>. UK residents: <a href="https://ico.org.uk/make-a-complaint/" target="_blank">ICO</a>.</li>
       </ul>
     </section>
@@ -595,7 +745,8 @@
         Data is encrypted in transit (TLS) and at rest (encrypted Postgres via Supabase), with
         Row-Level Security: you access only your own data (and, for a coach, that of athletes who
         joined them). Your raw health data (Apple Health) and <strong>GPS coordinates</strong> stay
-        on your iOS device and are <strong>never sent to our servers</strong>. In case of a data
+        on your device and are <strong>never sent to our servers</strong> (only the derived metrics
+        described in §2 are). In case of a data
         breach, the CNIL will be notified within 72 hours (Art. 33 GDPR) and you will be informed if
         necessary (Art. 34).
       </p>
@@ -604,9 +755,11 @@
     <section>
       <h2>10. Age</h2>
       <p>
-        PowerQuest is intended for users aged <strong>15 or older</strong> (Art. 7-1 French Data
-        Protection Act). An age check is performed at sign-up. If your local legislation requires a
-        higher minimum age or parental consent, that requirement applies.
+        PowerQuest is intended for users aged <strong>15 or older</strong> (art. 45 of French Data
+        Protection Act no. 78-17). An age check is performed at sign-up. If your local legislation requires a
+        higher minimum age or parental consent, that requirement applies. <strong>Weight
+        tracking</strong> is reserved for users aged <strong>18 and over</strong> (confirmation
+        asked when it is turned on).
       </p>
     </section>
 
