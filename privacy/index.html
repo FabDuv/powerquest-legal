@@ -70,7 +70,7 @@
   <!-- ===================== FRENCH ===================== -->
   <div data-lang="fr">
     <h1>Politique de confidentialité</h1>
-    <p class="date">Dernière mise à jour : 13 octobre 2026 · Version 2.4 (iOS + Web)</p>
+    <p class="date">Dernière mise à jour : 5 novembre 2026 · Version 2.5 (iOS + Web)</p>
 
     <p>
       PowerQuest (« l'Application », « le Service ») est une application de suivi
@@ -232,13 +232,43 @@
           affichées.
         </li>
         <li>
-          <strong>Données techniques</strong> : adresse IP, type d'appareil, version iOS/app,
+          <strong>Usage</strong> (comptes connectés) : événements rattachés à votre compte : ouvertures de l'app, écrans consultés, étapes de création et de séance (ouverte, lancée, abandonnée, terminée, rang de l'exercice), passage par l'essai sans compte (compte créé ou compte existant), vos réponses à « Comment nous as-tu connus ? » et au sondage de facilité, bilans techniques des publicités. Jamais de contenu de séance, de donnée de santé ni de texte libre.
+        </li>
+        <li>
+          <strong>Données techniques</strong> : adresse IP, type d'appareil et de navigateur utilisé à la connexion, version iOS/app,
           horodatages de connexion, journaux d'erreur et de performance (collectés par Sentry pour
           la détection de bugs), et stockage local (session, consentement publicitaire, état
           d'onboarding).
         </li>
       </ul>
       <p>Nous <strong>ne vendons jamais</strong> vos données.</p>
+
+      <h3>Essai sans compte (iOS, selon votre version de l'application)</h3>
+      <p>
+        Sur iPhone, vous pouvez essayer l'application sans créer de compte : onboarding, programme et
+        première séance. Un compte est ensuite demandé pour lancer une nouvelle séance. Vous pouvez
+        refuser : ce que vous avez fait reste sur votre iPhone. Les activités cardio enregistrées sans
+        lancer de séance restent possibles sans compte. Pendant cet essai :
+      </p>
+      <ul>
+        <li><strong>Votre prénom ou pseudo éventuel, vos réponses à l'onboarding, votre programme et vos séances restent sur votre iPhone</strong> : ils ne sont pas envoyés à nos serveurs et nous n'y avons pas accès. Si vous utilisez le GPS pour une sortie, il est traité sur votre iPhone.</li>
+        <li><strong>Aucune publicité</strong> n'est affichée et <strong>aucun identifiant publicitaire</strong> n'est lu : ni le SDK publicitaire ni la demande de suivi ne sont lancés.</li>
+        <li><strong>Aucune donnée de santé</strong> n'est recueillie : ni fréquence cardiaque, ni calories, ni poids, ni Apple Santé, ni montre connectée.</li>
+        <li><strong>Ce qui part quand même du téléphone</strong>, sans le contenu de votre essai :
+          <ul>
+            <li>à chaque ouverture de l'application ou retour dans celle-ci, une vérification de la version minimale auprès de notre serveur (hébergé par Supabase) ;</li>
+            <li>vers Sentry, notre outil de supervision : des informations de bon fonctionnement (sessions d'utilisation, mesures de performance sur environ un écran ou une action sur cinq, rapports en cas d'erreur ou de plantage), avec le type d'appareil, les versions d'iOS et de l'application et les dernières actions techniques. Elles ne portent pas d'identifiant de compte, mais un <strong>identifiant technique aléatoire</strong> enregistré sur votre iPhone et propre à cette installation. Si vous créez ensuite un compte, ce même identifiant peut relier ces données à votre compte chez Sentry ;</li>
+            <li><strong>mesure d'audience de l'essai</strong> : à cinq étapes (début de l'essai, fin de l'onboarding, séance lancée, séance terminée, demande de compte affichée), l'application demande à notre serveur d'ajouter 1 à un compteur commun du jour. Cet envoi ne contient ni identifiant, ni prénom, ni contenu de séance, et rien n'est enregistré sur votre iPhone pour cette mesure, hormis votre choix si vous vous y opposez. Votre adresse IP n'est pas enregistrée avec ces compteurs. Nous ne voyons que des totaux, jamais de parcours individuel. Pour vous y opposer : onglet Profil → « Ne pas compter mon essai » ; ce choix vaut pour les étapes suivantes.</li>
+          </ul>
+          Ces échanges utilisent nécessairement l'adresse IP de votre appareil et peuvent figurer dans les journaux techniques de ces prestataires.
+        </li>
+      </ul>
+      <p>
+        Si vous <strong>créez un compte</strong>, ce que vous avez créé pendant l'essai (programme, planning, modèles de séance, exercices personnels, réglages d'exercice, séances, activités, records) et la date à laquelle vous avez validé votre âge et l'avertissement médical sont envoyés à nos serveurs, sans fréquence cardiaque ni calories. Votre compte garde aussi la trace de votre passage par l'essai, et le reste de cette politique s'applique. Si vous vous connectez à un <strong>compte existant</strong>, seules vos séances et activités rejoignent votre historique, avec la même trace de passage : le reste de l'essai (programme, planning, modèles, 1RM, records, réglages) est retiré de l'iPhone.
+      </p>
+      <p>
+        Vous pouvez aussi effacer votre essai (onglet Profil → « Effacer mon essai ») ou supprimer l'application. Tant que vous n'avez pas créé de compte, nous n'avons aucune copie du contenu de votre essai ; seuls subsistent, pour leur durée de conservation, les journaux techniques et les données Sentry décrits ci-dessus.
+      </p>
     </section>
 
     <section>
@@ -255,6 +285,8 @@
         <li>Modérer le contenu communautaire et prévenir les abus</li>
         <li>Envoyer des notifications push (séances assignées par un coach, activité sociale)</li>
         <li>Détecter les bugs et monitorer les performances (Sentry)</li>
+        <li>Comprendre l'usage de l'application, corriger ses parcours et ses anomalies, surtout par des totaux. Derrière une statistique, un administrateur peut aussi voir la liste des comptes concernés (pseudo, nombre d'occurrences, date de la dernière) et vous écrire depuis cette liste. Il peut consulter les événements et les séances d'un compte pour traiter une demande de support, un bug ou une anomalie technique</li>
+        <li>Mesurer l'audience de l'essai sans compte par des compteurs globaux, pour détecter les problèmes de parcours et améliorer l'ergonomie</li>
         <li>Diffuser des publicités contextuelles ou personnalisées en version gratuite</li>
         <li>Répondre à vos demandes de support</li>
       </ul>
@@ -296,7 +328,7 @@
         </li>
         <li>
           <strong>Intérêt légitime (Art. 6(1)(f))</strong> : modération du contenu,
-          sécurité des comptes, détection de bugs (Sentry), push coach.
+          sécurité des comptes, détection de bugs et performances (Sentry, y compris pendant l'essai sans compte), push coach, vérification de la version de l'application, compréhension de l'usage (vous pouvez vous y opposer en nous écrivant), compteurs de l'essai (pas de consentement : mesure limitée à des statistiques anonymes, au sens de l'exemption de l'art. 82 de la loi Informatique et Libertés ; vous pouvez vous y opposer).
         </li>
       </ul>
     </section>
@@ -310,7 +342,7 @@
         <li><strong>Google</strong> (Google Ireland Ltd / Google LLC) — connexion Google (web), publicité AdSense (web) / AdMob (iOS), gestion du consentement</li>
         <li><strong>Garmin</strong> (Garmin Ltd) — envoi de séances/plans vers votre montre et import des résultats, via l'app Garmin Connect Mobile installée sur votre appareil</li>
         <li><strong>Strava</strong> (Strava, Inc., États-Unis) — si vous connectez votre compte : nous lui transmettons uniquement ce qu'exige la connexion (jetons d'autorisation, identifiant d'athlète) et en recevons vos activités. Strava traite vos données en tant que responsable de traitement distinct, selon sa propre politique de confidentialité.</li>
-        <li><strong>Sentry</strong> (iOS) — rapports d'erreurs et de performance, <strong>rattachés à votre identifiant de compte</strong> pour le diagnostic</li>
+        <li><strong>Sentry</strong> (iOS) — rapports d'erreurs et de performance, <strong>rattachés à votre identifiant de compte</strong> pour le diagnostic ; pendant l'essai sans compte, à un identifiant technique aléatoire de l'installation</li>
       </ul>
       <p class="notice">
         Les <strong>données de localisation GPS</strong> utilisées pendant une séance sont traitées
@@ -338,7 +370,7 @@
         <li><strong>Vercel</strong> (États-Unis) — diffusion de l'app web et journaux techniques ;</li>
         <li><strong>Garmin</strong> — la transmission de séances vers votre montre transite par l'app Garmin Connect Mobile ; Garmin peut traiter ces données hors UE selon ses propres conditions ;</li>
         <li><strong>Strava</strong> (États-Unis) — si vous connectez votre compte, vos activités (dont fréquence cardiaque et calories) nous viennent de ses serveurs aux États-Unis ; Strava les traite sous sa propre responsabilité ;</li>
-        <li><strong>Sentry</strong> — supervision des erreurs, hébergement susceptible d'être aux États-Unis.</li>
+        <li><strong>Sentry</strong> — supervision des erreurs techniques (iOS) : données hébergées dans l'Union européenne (Allemagne). Sentry étant une société américaine, un accès depuis les États-Unis reste possible, encadré par les garanties décrites ci-dessous.</li>
       </ul>
       <p>
         Lorsqu'un transfert vers les États-Unis a lieu, il est encadré par les <strong>Clauses
@@ -357,6 +389,9 @@
         </li>
         <li><strong>Localisation GPS</strong> : non conservée (seule la distance agrégée l'est, avec la séance).</li>
         <li><strong>Données de modération</strong> : conservées 1 an après résolution du signalement.</li>
+        <li><strong>Essai sans compte</strong> : conservé sur votre iPhone uniquement, jusqu'à ce que vous l'effaciez, que vous supprimiez l'application, ou que vous créiez un compte ou vous connectiez.</li>
+        <li><strong>Événements d'usage</strong> : 180 jours.</li>
+        <li><strong>Compteurs de l'essai</strong> : 25 mois maximum. Ils ne permettent de retrouver personne.</li>
         <li><strong>Journaux techniques (Sentry, logs de connexion)</strong> : 12 mois maximum.</li>
         <li><strong>Consentement publicitaire</strong> : conservé jusqu'à son retrait.</li>
         <li><strong>Poids pour les calories</strong> : conservé sur votre appareil uniquement, jusqu'à ce que vous le retiriez (ou désinstalliez l'application / effaciez les données du navigateur).</li>
@@ -402,7 +437,7 @@
       <h2>10. Mineurs</h2>
       <p>
         PowerQuest est réservé aux personnes d'au moins <strong>15 ans</strong> en France
-        (art. 45 de la loi n° 78-17 du 6 janvier 1978). Une confirmation d'âge est demandée à l'inscription.
+        (art. 45 de la loi n° 78-17 du 6 janvier 1978). Une confirmation d'âge est demandée au début de l'essai ou à l'inscription, et la création d'un compte vaut confirmation.
         Si votre législation locale impose un âge ou un consentement parental différent, ce seuil
         s'applique. Le <strong>suivi du poids</strong> est réservé aux personnes de
         <strong>18 ans et plus</strong> (confirmation demandée à son activation).
@@ -441,7 +476,7 @@
   <!-- ===================== ENGLISH ===================== -->
   <div data-lang="en">
     <h1>Privacy Policy</h1>
-    <p class="date">Last updated: October 13, 2026 · Version 2.4 (iOS + Web)</p>
+    <p class="date">Last updated: November 5, 2026 · Version 2.5 (iOS + Web)</p>
 
     <p>
       PowerQuest ("the App", "the Service") is a training-tracking application available on
@@ -587,12 +622,42 @@
           ads (without a targeting identifier) may be shown.
         </li>
         <li>
-          <strong>Technical data</strong>: IP address, device type, iOS/app version, connection
+          <strong>Usage</strong> (signed-in accounts): events linked to your account: app opens, screens viewed, creation and workout steps (opened, started, abandoned, finished, exercise rank), coming through the trial (new or existing account), your answers to "How did you hear about us?" and the ease survey, technical ad summaries. Never workout content, health data or free text.
+        </li>
+        <li>
+          <strong>Technical data</strong>: IP address, device and browser type used at sign-in, iOS/app version, connection
           timestamps, error and performance logs (collected by Sentry for bug detection), and local
           storage (session, ad consent, onboarding state).
         </li>
       </ul>
       <p>We <strong>never sell</strong> your data.</p>
+
+      <h3>Trying without an account (iOS, depending on your app version)</h3>
+      <p>
+        On iPhone, you can try the app without creating an account: onboarding, program and first
+        workout. An account is then requested to start another workout. You can decline: what you did
+        stays on your iPhone. Cardio activities logged without starting a workout remain possible
+        without an account. During this trial:
+      </p>
+      <ul>
+        <li><strong>Your first name or username if any, your onboarding answers, your program and your workouts stay on your iPhone</strong>: they are not sent to our servers and we cannot access them. If you use GPS for an outing, it is processed on your iPhone.</li>
+        <li><strong>No ads</strong> are shown and <strong>no advertising identifier</strong> is read: neither the advertising SDK nor the tracking request is started.</li>
+        <li><strong>No health data</strong> is collected: no heart rate, calories, weight, Apple Health or connected watch.</li>
+        <li><strong>What still leaves the phone</strong>, without the content of your trial:
+          <ul>
+            <li>each time the app is opened or resumed, a minimum-version check with our server (hosted by Supabase);</li>
+            <li>to Sentry, our monitoring tool: operating information (usage sessions, performance measurements on about one screen or action in five, error or crash reports), with device type, iOS and app versions and recent technical actions. It carries no account identifier, but a <strong>random technical identifier</strong> stored on your iPhone and specific to this installation. If you then create an account, this identifier may link this data to your account at Sentry;</li>
+            <li><strong>trial audience measurement</strong>: at five steps (trial started, onboarding finished, workout started, workout finished, account request shown), the app asks our server to add 1 to a shared daily counter. This contains no identifier, name or workout content, and nothing is stored on your iPhone for this measurement, except your choice if you object. Your IP address is not recorded with these counters. We only see totals, never an individual journey. To object: Profile tab → "Don't count my trial"; this applies to the following steps.</li>
+          </ul>
+          These exchanges necessarily use your device's IP address and may appear in these providers' technical logs.
+        </li>
+      </ul>
+      <p>
+        If you <strong>create an account</strong>, what you created during the trial (program, schedule, workout templates, custom exercises, exercise settings, workouts, activities, records) and the date you confirmed your age and the medical notice are sent to our servers, without heart rate or calories. Your account also keeps a record that you came through the trial, and the rest of this policy applies. If you sign in to an <strong>existing account</strong>, only your workouts and activities join your history, with the same record: the rest of the trial (program, schedule, templates, 1RM, records, settings) is removed from the iPhone.
+      </p>
+      <p>
+        You can also delete your trial (Profile tab → "Delete my trial") or delete the app. As long as you have not created an account, we hold no copy of your trial's content; only the technical logs and Sentry data described above remain, for their retention period.
+      </p>
     </section>
 
     <section>
@@ -609,6 +674,8 @@
         <li>Moderate community content and prevent abuse</li>
         <li>Send push notifications (coach-assigned sessions, social activity)</li>
         <li>Detect bugs and monitor performance (Sentry)</li>
+        <li>Understand how the app is used and fix its flows and anomalies, mostly through totals. Behind a statistic, an administrator can also see the list of accounts concerned (username, number of occurrences, date of the latest) and write to you from that list. They can view an account's events and workouts to handle a support request, a bug or a technical anomaly</li>
+        <li>Measure the audience of the trial without an account with global counters, to detect flow problems and improve usability</li>
         <li>Show contextual or personalised ads in the free version</li>
         <li>Respond to support requests</li>
       </ul>
@@ -650,7 +717,7 @@
         </li>
         <li>
           <strong>Legitimate interest (Art. 6(1)(f))</strong>: content moderation, account security,
-          bug detection (Sentry), coach push notifications.
+          bug detection and performance (Sentry, including during the trial without an account), coach push notifications, app version check, understanding usage (you can object by writing to us), trial counters (no consent: measurement limited to anonymous statistics, within the exemption of art. 82 of the French Data Protection Act; you can object).
         </li>
       </ul>
     </section>
@@ -664,7 +731,7 @@
         <li><strong>Google</strong> (Google Ireland Ltd / Google LLC) — Google sign-in (web), AdSense (web) / AdMob (iOS) advertising, consent management</li>
         <li><strong>Garmin</strong> (Garmin Ltd) — sending sessions/plans to your watch and importing results, via the Garmin Connect Mobile app on your device</li>
         <li><strong>Strava</strong> (Strava, Inc., United States) — if you connect your account: we only send it what the connection requires (authorisation tokens, athlete ID) and receive your activities from it. Strava processes your data as a separate controller, under its own privacy policy.</li>
-        <li><strong>Sentry</strong> (iOS) — error and performance reports, <strong>linked to your account identifier</strong> for diagnostics</li>
+        <li><strong>Sentry</strong> (iOS) — error and performance reports, <strong>linked to your account identifier</strong> for diagnostics; during the trial without an account, to a random technical identifier of the installation</li>
       </ul>
       <p class="notice">
         The <strong>GPS location data</strong> used during a session is processed
@@ -692,7 +759,7 @@
         <li><strong>Vercel</strong> (United States) — web app delivery and technical logs;</li>
         <li><strong>Garmin</strong> — sending sessions to your watch transits through the Garmin Connect Mobile app; Garmin may process this data outside the EU under its own terms;</li>
         <li><strong>Strava</strong> (United States) — if you connect your account, your activities (including heart rate and calories) come to us from its servers in the United States; Strava processes them under its own responsibility;</li>
-        <li><strong>Sentry</strong> — error monitoring, possibly hosted in the United States.</li>
+        <li><strong>Sentry</strong> — technical error monitoring (iOS): data hosted in the European Union (Germany). As Sentry is a US company, access from the United States remains possible, under the safeguards described below.</li>
       </ul>
       <p>
         Where a transfer to the United States occurs, it is governed by the European Commission's
@@ -711,6 +778,9 @@
         </li>
         <li><strong>GPS location</strong>: not retained (only the aggregate distance is, with the session).</li>
         <li><strong>Moderation data</strong>: retained for 1 year after the report is resolved.</li>
+        <li><strong>Trial without an account</strong>: kept on your iPhone only, until you delete it, delete the app, or create an account or sign in.</li>
+        <li><strong>Usage events</strong>: 180 days.</li>
+        <li><strong>Trial counters</strong>: 25 months maximum. They cannot identify anyone.</li>
         <li><strong>Technical logs (Sentry, connection logs)</strong>: maximum 12 months.</li>
         <li><strong>Advertising consent</strong>: kept until withdrawn.</li>
         <li><strong>Weight for calories</strong>: kept on your device only, until you remove it (or uninstall the app / clear your browser data).</li>
@@ -756,7 +826,7 @@
       <h2>10. Age</h2>
       <p>
         PowerQuest is intended for users aged <strong>15 or older</strong> (art. 45 of French Data
-        Protection Act no. 78-17). An age check is performed at sign-up. If your local legislation requires a
+        Protection Act no. 78-17). An age check is performed at the start of the trial or at sign-up, and creating an account counts as confirmation. If your local legislation requires a
         higher minimum age or parental consent, that requirement applies. <strong>Weight
         tracking</strong> is reserved for users aged <strong>18 and over</strong> (confirmation
         asked when it is turned on).
